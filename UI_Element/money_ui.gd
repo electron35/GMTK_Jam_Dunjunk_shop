@@ -7,10 +7,8 @@ func _init():
 	
 func _process(delta):
 	money += 1
-	$Timer.text = str(int($Timer/Time.time_left)) + "s"
-	$Money.text = str(money)
-	
-
+	$Background/Timer.text = str(int($Background/Timer/Time.time_left)) + "s"
+	$Background/Money.text = str(money)
 
 func _on_time_timeout():
 	money -= 100

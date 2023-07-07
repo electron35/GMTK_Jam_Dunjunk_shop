@@ -15,17 +15,27 @@ grow_vertical = 2
 split_offset = 50
 script = ExtResource("1_1eu1h")
 
-[node name="Money" type="Label" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 2
+
+[node name="Money" type="Label" parent="Background"]
+layout_mode = 2
+offset_top = 9.0
+offset_right = 46.0
+offset_bottom = 35.0
 text = "00000"
 horizontal_alignment = 1
 
-[node name="Timer" type="Label" parent="."]
+[node name="Timer" type="Label" parent="Background"]
 layout_mode = 2
+offset_left = -62.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = 35.0
 text = "00:00"
 
-[node name="Time" type="Timer" parent="Timer"]
+[node name="Time" type="Timer" parent="Background/Timer"]
 wait_time = 5.0
 autostart = true
 
-[connection signal="timeout" from="Timer/Time" to="." method="_on_time_timeout"]
+[connection signal="timeout" from="Background/Timer/Time" to="." method="_on_time_timeout"]
