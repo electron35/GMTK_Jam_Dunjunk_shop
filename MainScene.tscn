@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://cymdplt8wijn3"]
+[gd_scene load_steps=2 format=3 uid="uid://cymdplt8wijn3"]
+
+[ext_resource type="PackedScene" uid="uid://b3l2tmmaibn4h" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
 
 [node name="Scene" type="Node2D"]
+
+[node name="MoneyUI" parent="." instance=ExtResource("1_n71ok")]
+offset_left = 534.0
+offset_top = 1.0
+offset_right = 637.0
+offset_bottom = 34.0
