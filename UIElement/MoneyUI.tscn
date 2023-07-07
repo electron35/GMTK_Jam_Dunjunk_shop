@@ -2,40 +2,37 @@
 
 [ext_resource type="Script" path="res://GMTK_Jam/UIElement/MoneyUI.gd" id="1_el5aj"]
 
-[node name="money_ui" type="HSplitContainer"]
+[node name="MoneyUI" type="TextureRect"]
+offset_right = 103.0
+offset_bottom = 33.0
+
+[node name="SplitBox" type="HSplitContainer" parent="."]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.067
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -77.184
-offset_right = -1053.0
-offset_bottom = -604.0
+offset_left = -1.901
+offset_top = 3.0
+offset_right = 1.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 split_offset = 50
 script = ExtResource("1_el5aj")
+rent_value = 200
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Money" type="Label" parent="SplitBox"]
 layout_mode = 2
-
-[node name="Money" type="Label" parent="Background"]
-layout_mode = 2
-offset_top = 9.0
-offset_right = 46.0
-offset_bottom = 35.0
 text = "00000"
 horizontal_alignment = 1
 
-[node name="Timer" type="Label" parent="Background"]
+[node name="Timer" type="Label" parent="SplitBox"]
 layout_mode = 2
-offset_left = -62.0
-offset_top = 9.0
-offset_right = -12.0
-offset_bottom = 35.0
 text = "00:00"
 
-[node name="Time" type="Timer" parent="Background/Timer"]
+[node name="Time" type="Timer" parent="SplitBox/Timer"]
 wait_time = 5.0
 autostart = true
 
-[connection signal="timeout" from="Background/Timer/Time" to="." method="_on_time_timeout"]
+[connection signal="timeout" from="SplitBox/Timer/Time" to="SplitBox" method="_on_time_timeout"]

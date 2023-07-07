@@ -1,5 +1,6 @@
 extends HSplitContainer
 
+@export var rent_value = 100
 var money = 0
 
 func _init():
@@ -7,8 +8,8 @@ func _init():
 	
 func _process(delta):
 	money += 1
-	$Background/Timer.text = str(int($Background/Timer/Time.time_left)) + "s"
-	$Background/Money.text = str(money)
+	$Timer.text = str(int($Timer/Time.time_left)) + "s"
+	$Money.text = str(money)
 
 func _on_time_timeout():
-	money -= 100
+	money -= rent_value
