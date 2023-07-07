@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3l2tmmaibn4h"]
 
-[ext_resource type="Script" path="res://GMTK_Jam/UI_Element/money_ui.gd" id="1_1eu1h"]
+[ext_resource type="Script" path="res://GMTK_Jam/UIElement/MoneyUI.gd" id="1_el5aj"]
 
 [node name="money_ui" type="HSplitContainer"]
 anchors_preset = -1
@@ -13,7 +13,7 @@ offset_bottom = -604.0
 grow_horizontal = 2
 grow_vertical = 2
 split_offset = 50
-script = ExtResource("1_1eu1h")
+script = ExtResource("1_el5aj")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 2
