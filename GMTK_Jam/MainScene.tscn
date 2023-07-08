@@ -7,5 +7,5 @@
 [node name="MoneyUI" parent="." instance=ExtResource("1_n71ok")]
 offset_left = 534.0
 offset_top = 1.0
-offset_right = 637.0
+offset_right = 662.0
 offset_bottom = 34.0
