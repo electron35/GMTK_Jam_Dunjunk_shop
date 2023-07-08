@@ -6,9 +6,9 @@ extends PanelContainer
 signal slot_clicked(index: int, button: int)
 
 func set_slot_data(slot_data: SlotData):
-	var item_data = slot_data.item_data
-	texture_rect.texture = item_data.texture
-	tooltip_text = "%s" % [item_data.type]
+	var material_data = slot_data.mat_data
+	texture_rect.texture = material_data.texture
+	tooltip_text = "%s" % [material_data.type]
 	
 	quality_label.text = "%x" % [slot_data.quality]
 	quality_label.show()
