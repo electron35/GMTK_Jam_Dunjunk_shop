@@ -24,10 +24,3 @@ func on_inventory_update(inventory_data: InventoryData):
 		
 		if slot_data:
 			slot.set_slot_data(slot_data)
-			
-			
-#	if inventory_data.slot_datas[0]:
-#		craft_slot_1.set_slot_data(inventory_data.slot_datas[0])
-#	if inventory_data.slot_datas[1]:
-#		craft_slot_2.set_slot_data(inventory_data.slot_datas[1])
-
