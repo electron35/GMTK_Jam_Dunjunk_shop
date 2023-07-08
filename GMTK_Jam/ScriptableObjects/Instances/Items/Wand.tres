@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dgk3kuobijlnf"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/item_data.gd" id="1_ppj5e"]
+[ext_resource type="Texture2D" uid="uid://by72hqpgishg6" path="res://GMTK_Jam/Resources/Stone.png" id="2_dota1"]
+
+[resource]
+script = ExtResource("1_ppj5e")
+item_name = "Wand"
+quality = 0
+texture = ExtResource("2_dota1")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MaterialData" load_steps=3 format=3 uid="uid://dy70gdpcsqxvs"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/material_data.gd" id="1_2rqkt"]
+[ext_resource type="Texture2D" uid="uid://d2xtrvt7ft6st" path="res://GMTK_Jam/Resources/Stick_clip_art.svg" id="2_8n7fv"]
+
+[resource]
+script = ExtResource("1_2rqkt")
+type = "Stick"
+texture = ExtResource("2_8n7fv")

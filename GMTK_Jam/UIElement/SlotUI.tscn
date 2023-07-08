@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcvv01ntwrxis"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/SlotUI.gd" id="1_egk54"]
+[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_g8fse"]
+
+[node name="SlotUI" type="PanelContainer"]
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_egk54")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="QualityLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_g8fse")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

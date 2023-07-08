@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c47gv16krga2d"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/stall_ui.gd" id="1_ssp50"]
+
+[node name="StallUI" type="MarginContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -378.0
+offset_right = 908.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ssp50")
+
+[node name="StallBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0

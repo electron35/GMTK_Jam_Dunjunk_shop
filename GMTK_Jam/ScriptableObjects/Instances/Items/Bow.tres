@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b2t6a48khcqhd"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/item_data.gd" id="1_fguvd"]
+[ext_resource type="Texture2D" uid="uid://d2xtrvt7ft6st" path="res://GMTK_Jam/Resources/Stick_clip_art.svg" id="2_u6d5o"]
+
+[resource]
+script = ExtResource("1_fguvd")
+item_name = "Bow"
+quality = 1
+texture = ExtResource("2_u6d5o")
