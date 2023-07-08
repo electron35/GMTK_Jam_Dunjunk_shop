@@ -23,4 +23,4 @@ quality = 3
 
 [resource]
 script = ExtResource("1_0psm6")
-slot_datas = Array[ExtResource("3_7lyri")]([SubResource("Resource_q1cqw"), null, null, null, null, null, SubResource("Resource_ntppf"), null, SubResource("Resource_m74gl"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+slot_datas = Array[ExtResource("3_7lyri")]([SubResource("Resource_q1cqw"), null, null, null, null, null, SubResource("Resource_ntppf"), null, SubResource("Resource_m74gl"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])

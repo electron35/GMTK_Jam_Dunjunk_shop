@@ -32,7 +32,21 @@ func empty():
 		slot_datas[index] = null
 		inventory_updated.emit(self)
 	
+func add(item,quality):
+	var found_free = false
 	
+	var slot:SlotData = SlotData.new()
+	slot.mat_data = item
+	slot.quality = quality
+	
+	for index in range(0,slot_datas.size()):
+		if (slot_datas[index] == null):
+			slot_datas[index] = slot
+			found_free = true
+			break
+	if !found_free:
+		slot_datas[slot_datas.size()-1] = slot
+	inventory_updated.emit(self)
 
 func on_slot_clicked(index: int, button: int):
 	inventory_interact.emit(self,index,button)

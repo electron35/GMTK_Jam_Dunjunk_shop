@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AdventurerData" load_steps=6 format=3 uid="uid://csuut7x3gyahj"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/AdventurerResource.gd" id="1_thujr"]
+[ext_resource type="Texture2D" uid="uid://djs2owi2m5goy" path="res://GMTK_Jam/Resources/sprite/WaF/WaF_Bow.png" id="2_fieh2"]
+[ext_resource type="Texture2D" uid="uid://b6w7sbukoh72r" path="res://GMTK_Jam/Resources/sprite/WaF/WaF_Neutral.png" id="3_86n7a"]
+[ext_resource type="Texture2D" uid="uid://cds0tqn2m4lsu" path="res://GMTK_Jam/Resources/sprite/WaF/WaF_Staff.png" id="4_f13fi"]
+[ext_resource type="Texture2D" uid="uid://k26f2gxs7o8l" path="res://GMTK_Jam/Resources/sprite/WaF/WaF_Upgrade.png" id="5_lxmy1"]
+
+[resource]
+script = ExtResource("1_thujr")
+className = "Sword"
+texture_neutral = ExtResource("3_86n7a")
+texture_sword = ExtResource("5_lxmy1")
+texture_wand = ExtResource("4_f13fi")
+texture_bow = ExtResource("2_fieh2")

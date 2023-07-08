@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cymdplt8wijn3"]
+[gd_scene load_steps=7 format=3 uid="uid://cymdplt8wijn3"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/MainScene.gd" id="1_csqij"]
 [ext_resource type="PackedScene" uid="uid://bopog6a2boi5e" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_a3b6q"]
-[ext_resource type="Texture2D" uid="uid://dwbyenow560p7" path="res://GMTK_Jam/Resources/BG.png" id="3_5cguf"]
 [ext_resource type="PackedScene" uid="uid://bd5rxguf277o2" path="res://GMTK_Jam/UIElement/CraftInventory.tscn" id="3_c8hd4"]
 [ext_resource type="PackedScene" uid="uid://c47gv16krga2d" path="res://GMTK_Jam/UIElement/stall_ui.tscn" id="5_1j3gn"]
 [ext_resource type="PackedScene" uid="uid://c2kreckpasikc" path="res://GMTK_Jam/Nodes/Aventurier/AdventurerLane.tscn" id="6_jhyn8"]
@@ -11,45 +10,29 @@
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_csqij")
 
-[node name="AdventurerLane" parent="." instance=ExtResource("6_jhyn8")]
-position = Vector2(20, -55)
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
-offset_right = 1607.0
-offset_bottom = 906.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
-layout_mode = 2
-texture = ExtResource("3_5cguf")
-expand_mode = 2
-
-[node name="Foreground" type="CanvasLayer" parent="."]
-
-[node name="MoneyUI" parent="Foreground" instance=ExtResource("1_n71ok")]
+[node name="MoneyUI" parent="." instance=ExtResource("1_n71ok")]
 offset_left = 786.0
 offset_top = 11.0
 offset_right = 914.0
 offset_bottom = 44.0
 
-[node name="CraftingMenu" type="Button" parent="Foreground"]
-offset_left = 977.0
+[node name="CraftingMenu" type="Button" parent="."]
+offset_left = 997.0
 offset_top = 8.0
-offset_right = 1585.0
+offset_right = 1575.0
 offset_bottom = 43.0
 theme = ExtResource("2_a3b6q")
 theme_override_font_sizes/font_size = 24
 text = "Inventaire"
 
-[node name="CraftInventory" parent="Foreground/CraftingMenu" instance=ExtResource("3_c8hd4")]
+[node name="CraftInventory" parent="CraftingMenu" instance=ExtResource("3_c8hd4")]
 layout_mode = 1
 offset_left = 1.0
 offset_top = 39.0
 offset_right = 221.883
 offset_bottom = 391.0
 
-[node name="StallUI" parent="Foreground" instance=ExtResource("5_1j3gn")]
+[node name="StallUI" parent="." instance=ExtResource("5_1j3gn")]
 anchors_preset = 0
 anchor_top = 0.0
 anchor_bottom = 0.0
@@ -59,4 +42,7 @@ offset_right = 597.0
 offset_bottom = 894.0
 grow_vertical = 1
 
-[connection signal="pressed" from="Foreground/CraftingMenu" to="." method="_on_crafting_menu_pressed"]
+[node name="AdventurerLane" parent="." instance=ExtResource("6_jhyn8")]
+position = Vector2(20, -55)
+
+[connection signal="pressed" from="CraftingMenu" to="." method="_on_crafting_menu_pressed"]

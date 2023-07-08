@@ -1,22 +1,30 @@
-extends Node
+extends Area2D
 
-var TimerInstanceCreation
+var rng = RandomNumberGenerator.new()
+
+var TimerInstanceCreation = 5
 const ScriptAventurer = preload("res://GMTK_Jam/Nodes/Aventurier/aventurier.tscn")
+@onready var timer = $Timer
 
 const Classes = [
-	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/Rogue.tres"),
-	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/Fighter.tres")
+	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/RogueF.tres"),
+	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/FighterF.tres"),
+	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/MageF.tres"),
+	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/RogueM.tres"),
+	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/FighterM.tres"),
+	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/MageM.tres")
+	
 ]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Timer.wait_time=TimerInstanceCreation
-	$Timer.start()
+	timer.wait_time=TimerInstanceCreation
+	timer.start()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_timer_timeout():
@@ -28,9 +36,7 @@ func _on_timer_timeout():
 func _create_adventurer():
 	var Adventurerspawned = ScriptAventurer.instantiate()
 	# TODO: randomiser la classe
-	Adventurerspawned.setClass(Classes[0])
+	Adventurerspawned.setClass(Classes[rng.randi_range(0,5)])
 	# TODO: spawner un objet
 	add_child(Adventurerspawned)
 	Adventurerspawned.position=$SpawnAdventurer.position
-	pass
-	

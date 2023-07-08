@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://12mxukwkpnb"
-path="res://.godot/imported/WaF_Line.png-d878988218b0bc2aea8fe93f27ba0707.ctex"
+uid="uid://bd3ba8vnn608q"
+path="res://.godot/imported/MaF_Bow.png-3db3ecfb89f0109a2c7530316b01f41b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GMTK_Jam/Resources/sprite/WaF_Line.png"
-dest_files=["res://.godot/imported/WaF_Line.png-d878988218b0bc2aea8fe93f27ba0707.ctex"]
+source_file="res://GMTK_Jam/Resources/sprite/MaF/MaF_Bow.png"
+dest_files=["res://.godot/imported/MaF_Bow.png-3db3ecfb89f0109a2c7530316b01f41b.ctex"]
 
 [params]
 
