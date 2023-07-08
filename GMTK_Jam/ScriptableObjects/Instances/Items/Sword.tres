@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://daa6yeyoxs2sm"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/ItemResource.gd" id="1_ga86h"]
+
+[resource]
+script = ExtResource("1_ga86h")
