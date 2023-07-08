@@ -3,4 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bgw5dbb5i6afo" path="res://GMTK_Jam/Resources/Font/Deutsch.ttf" id="1_p24lw"]
 
 [resource]
+default_font = ExtResource("1_p24lw")
+default_font_size = 12
+Button/fonts/font = ExtResource("1_p24lw")
 Label/fonts/font = ExtResource("1_p24lw")

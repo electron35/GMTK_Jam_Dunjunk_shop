@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=5 format=3 uid="uid://bqf4xny4osd4f"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/inventory_data.gd" id="1_gadic"]
+[ext_resource type="Resource" uid="uid://c7uf7x5l13tqv" path="res://data/Items/Ring.tres" id="2_wv2aa"]
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/slot_data.gd" id="3_a7a22"]
+
+[sub_resource type="Resource" id="Resource_g33ac"]
+script = ExtResource("3_a7a22")
+item_data = ExtResource("2_wv2aa")
+quality = 2
+
+[resource]
+script = ExtResource("1_gadic")
+slot_datas = Array[ExtResource("3_a7a22")]([SubResource("Resource_g33ac"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
