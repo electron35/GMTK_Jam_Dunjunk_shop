@@ -3,13 +3,18 @@ extends PanelContainer
 @onready var texture_rect = $MarginContainer/TextureRect
 @onready var quality_label = $QualityLabel
 
+var type: String = ""
+var quality: int 
+
 signal slot_clicked(index: int, button: int)
 
 func set_slot_data(slot_data: SlotData):
 	var material_data = slot_data.mat_data
 	texture_rect.texture = material_data.texture
-	tooltip_text = "%s" % [material_data.type]
+	type = "%s" % [material_data.type]
+	tooltip_text = type
 	
+	quality = slot_data.quality
 	quality_label.text = "%x" % [slot_data.quality]
 	quality_label.show()
 

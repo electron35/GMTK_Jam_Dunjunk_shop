@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MaterialData" load_steps=3 format=3 uid="uid://dddrucjcoejri"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/material_data.gd" id="1_g4bff"]
+[ext_resource type="Texture2D" uid="uid://by72hqpgishg6" path="res://GMTK_Jam/Resources/Stone.png" id="2_048r2"]
+
+[resource]
+script = ExtResource("1_g4bff")
+type = "Stone"
+texture = ExtResource("2_048r2")
