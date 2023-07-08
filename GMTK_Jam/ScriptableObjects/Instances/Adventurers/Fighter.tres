@@ -6,3 +6,4 @@
 script = ExtResource("1_35fwp")
 className = "Fighter"
 speed = 10
+puissance = 0

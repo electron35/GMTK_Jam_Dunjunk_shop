@@ -31,5 +31,6 @@ func _create_adventurer():
 	Adventurerspawned.setClass(Classes[0])
 	# TODO: spawner un objet
 	add_child(Adventurerspawned)
+	Adventurerspawned.position=$SpawnAdventurer.position
 	pass
 	
