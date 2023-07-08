@@ -1,34 +1,34 @@
 extends Area2D
 
-var AdventurerInShop
-var classeAventurer
-var objetVendre
+var adventurerInShop
+@export var classAdventurer:String
+var objectSell
 var powerAventurer
-var speedAventurer
-var AdvHasSell
-var AdvhasBuy
-var SpeedAdvBuy
+@export var speedAventurer:int
+var advHasSell
+var advhasBuy
+var speedAdvBuy
 
 func _ready():
-	AdventurerInShop=true
-	AdvHasSell=false
-	AdvhasBuy=false
+	adventurerInShop=true
+	advHasSell=false
+	advhasBuy=false
 
 func _process(delta):
-	if(AdventurerInShop==true):
-		if(AdvhasBuy):
-			position.x -= delta*SpeedAdvBuy
+	if(adventurerInShop==true):
+		if(advhasBuy):
+			position.x -= delta*speedAdvBuy
 		else:
 			position.x -= delta*speedAventurer
 
 func _sell():
 	print("Adventurer sells you Object for X gold")
-	AdvHasSell=true
+	advHasSell=true
 
 func _buy():
 	print("Adventurer buy you weapon for X gold")
-	AdvhasBuy=true
+	advhasBuy=true
 
 # lorsque l'aventurier va dans le donjon
 func _exitShop():
-	AdventurerInShop=false
+	adventurerInShop=false
