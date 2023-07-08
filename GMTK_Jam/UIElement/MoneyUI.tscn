@@ -22,7 +22,6 @@ grow_vertical = 2
 split_offset = 50
 dragger_visibility = 1
 script = ExtResource("1_1ttm1")
-rent_value = 200
 
 [node name="Money" type="Label" parent="SplitBox"]
 layout_mode = 2
