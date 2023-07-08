@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b23gfgab88oos"]
+
+[ext_resource type="FontFile" uid="uid://bgw5dbb5i6afo" path="res://GMTK_Jam/Resources/Font/Deutsch.ttf" id="1_p24lw"]
+
+[resource]
+Label/fonts/font = ExtResource("1_p24lw")
