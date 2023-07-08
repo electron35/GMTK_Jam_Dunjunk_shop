@@ -27,6 +27,13 @@ func drop_slot_data(grabbed_slot_data: SlotData, index: int) -> SlotData:
 	else:
 		return null
 
+func empty():
+	slot_datas
+	for index in range(0,slot_datas.size()):
+		slot_datas[index] = null
+		inventory_updated.emit(self)
+	
+	
 
 func on_slot_clicked(index: int, button: int):
 	inventory_interact.emit(self,index,button)
