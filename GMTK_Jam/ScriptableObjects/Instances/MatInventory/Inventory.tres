@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://GMTK_Jam/script/data/inventory_data.gd" id="1_0psm6"]
 [ext_resource type="Resource" uid="uid://c7uf7x5l13tqv" path="res://GMTK_Jam/ScriptableObjects/Instances/Materials/Ring.tres" id="2_gjulf"]
 [ext_resource type="Script" path="res://GMTK_Jam/script/data/slot_data.gd" id="3_7lyri"]
-[ext_resource type="Resource" uid="uid://dy70gdpcsqxvs" path="res://GMTK_Jam/ScriptableObjects/Instances/Materials/Stick.tres" id="4_ocr45"]
-[ext_resource type="Resource" uid="uid://dddrucjcoejri" path="res://GMTK_Jam/ScriptableObjects/Instances/Materials/Stone.tres" id="5_htj3a"]
+[ext_resource type="Resource" path="res://GMTK_Jam/ScriptableObjects/Instances/Materials/Stick.tres" id="4_ocr45"]
+[ext_resource type="Resource" path="res://GMTK_Jam/ScriptableObjects/Instances/Materials/Stone.tres" id="5_htj3a"]
 
 [sub_resource type="Resource" id="Resource_q1cqw"]
 script = ExtResource("3_7lyri")
