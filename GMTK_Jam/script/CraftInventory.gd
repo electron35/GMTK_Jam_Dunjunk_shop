@@ -4,8 +4,8 @@ extends Control
 @onready var craft_ui = $HBoxContainer/CraftUI
 @onready var inventory_ui = $HBoxContainer/InventoryUI
 
-var Inventory = preload("res://data/Inventory.tres")
-var CraftingSlot = preload("res://data/CraftingGrid.tres")
+var Inventory = preload("res://GMTK_Jam/ScriptableObjects/Instances/MatInventory/Inventory.tres")
+var CraftingSlot = preload("res://GMTK_Jam/ScriptableObjects/Instances/MatInventory/CraftingGrid.tres")
 var grabbed_slot_data: SlotData
 
 func _ready():
