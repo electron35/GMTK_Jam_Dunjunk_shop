@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cymdplt8wijn3"]
 
-[ext_resource type="PackedScene" uid="uid://b3l2tmmaibn4h" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
+[ext_resource type="PackedScene" uid="uid://bopog6a2boi5e" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
 
 [node name="Scene" type="Node2D"]
 
