@@ -4,7 +4,7 @@ var adventurerInShop
 @export var classAdventurer:String
 var objectSell
 var powerAventurer
-@export var speedAventurer:int
+@export var speedAdventurer:int
 var advHasSell
 var advhasBuy
 var speedAdvBuy
@@ -19,7 +19,7 @@ func _process(delta):
 		if(advhasBuy):
 			position.x -= delta*speedAdvBuy
 		else:
-			position.x -= delta*speedAventurer
+			position.x -= delta*speedAdventurer
 
 func _sell():
 	print("Adventurer sells you Object for X gold")
@@ -32,3 +32,8 @@ func _buy():
 # lorsque l'aventurier va dans le donjon
 func _exitShop():
 	adventurerInShop=false
+
+# parametre l'aventurier en fonction de la classe passee en argument
+func setClass(data: AdventurerData):
+	classAdventurer = data.className
+	speedAdventurer = data.speed
