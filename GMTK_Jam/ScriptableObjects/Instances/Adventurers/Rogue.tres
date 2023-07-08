@@ -6,3 +6,4 @@
 script = ExtResource("1_jdvyq")
 className = "Rogue"
 speed = 20
+puissance = 10

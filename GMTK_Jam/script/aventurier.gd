@@ -34,6 +34,6 @@ func _exitShop():
 	adventurerInShop=false
 
 # parametre l'aventurier en fonction de la classe passee en argument
-func setClass(data: AdventurerData):
+func setClass(data: AdventurerResource):
 	classAdventurer = data.className
 	speedAdventurer = data.speed

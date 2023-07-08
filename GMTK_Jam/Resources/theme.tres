@@ -3,4 +3,5 @@
 [ext_resource type="FontFile" uid="uid://bgw5dbb5i6afo" path="res://GMTK_Jam/Resources/Font/Deutsch.ttf" id="1_p24lw"]
 
 [resource]
+Label/font_sizes/font_size = 40
 Label/fonts/font = ExtResource("1_p24lw")
