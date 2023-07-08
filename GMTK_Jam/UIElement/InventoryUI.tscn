@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctfcmt515w0rc"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/InventoryUI.gd" id="1_m4cb5"]
+
+[node name="InventoryUI" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.5
+offset_top = 0.5
+offset_right = -873.5
+offset_bottom = -233.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m4cb5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ItemGrid" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 4

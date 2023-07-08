@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd5rxguf277o2"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/CraftInventory.gd" id="1_c07et"]
+[ext_resource type="PackedScene" uid="uid://hpqk7j3phf64" path="res://GMTK_Jam/UIElement/CraftUI.tscn" id="1_ysyqp"]
+[ext_resource type="PackedScene" uid="uid://ctfcmt515w0rc" path="res://GMTK_Jam/UIElement/InventoryUI.tscn" id="2_rd0et"]
+
+[node name="crafting_menu" type="Control"]
+layout_mode = 3
+anchor_right = 0.513
+anchor_bottom = 1.0
+offset_right = 0.0239868
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c07et")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CraftUI" parent="HBoxContainer" instance=ExtResource("1_ysyqp")]
+layout_mode = 2
+
+[node name="InventoryUI" parent="HBoxContainer" instance=ExtResource("2_rd0et")]
+layout_mode = 2
