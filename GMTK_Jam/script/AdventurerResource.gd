@@ -1,4 +1,4 @@
-class_name AdventurerData
+class_name AdventurerResource
 extends Resource
 
 @export var className: String
