@@ -1,11 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://cymdplt8wijn3"]
+[gd_scene load_steps=5 format=3 uid="uid://cymdplt8wijn3"]
 
+[ext_resource type="Script" path="res://GMTK_Jam/MainScene.gd" id="1_csqij"]
 [ext_resource type="PackedScene" uid="uid://bopog6a2boi5e" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
+[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_a3b6q"]
+[ext_resource type="PackedScene" uid="uid://bd5rxguf277o2" path="res://GMTK_Jam/UIElement/CraftInventory.tscn" id="3_c8hd4"]
 
 [node name="Scene" type="Node2D"]
+script = ExtResource("1_csqij")
 
 [node name="MoneyUI" parent="." instance=ExtResource("1_n71ok")]
 offset_left = 534.0
 offset_top = 1.0
 offset_right = 662.0
 offset_bottom = 34.0
+
+[node name="CraftingMenu" type="Button" parent="."]
+offset_left = 726.0
+offset_top = 8.0
+offset_right = 1142.0
+offset_bottom = 43.0
+theme = ExtResource("2_a3b6q")
+theme_override_font_sizes/font_size = 24
+text = "Inventaire"
+
+[node name="CraftInventory" parent="CraftingMenu" instance=ExtResource("3_c8hd4")]
+visible = false
+layout_mode = 1
+offset_left = 12.0
+offset_top = 36.0
+offset_right = 192.592
+offset_bottom = 317.0
+
+[connection signal="pressed" from="CraftingMenu" to="." method="_on_crafting_menu_pressed"]
