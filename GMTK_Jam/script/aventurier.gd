@@ -62,12 +62,9 @@ func _exitShop():
 	adventurerInShop=false
 
 # parametre l'aventurier en fonction de la classe passee en argument
-<<<<<<< Updated upstream
-func setClass(data: AdventurerResource):
-=======
+
 func setClass(data: AdventurerData):
 	class_reference = data
->>>>>>> Stashed changes
 	classAdventurer = data.className
 	
 	$SpriteAventurer.texture = data.texture_neutral
