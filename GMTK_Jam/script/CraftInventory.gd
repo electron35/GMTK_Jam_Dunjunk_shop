@@ -15,7 +15,7 @@ func _ready():
 	Inventory.inventory_interact.connect(on_inventory_interact)
 	CraftingSlot.inventory_interact.connect(on_inventory_interact)
 
-func _process(delta):
+func _process(_delta):
 	if grabbed_slot.visible:
 		grabbed_slot.global_position = get_global_mouse_position() + Vector2(5,5)
 	

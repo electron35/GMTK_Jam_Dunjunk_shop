@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="StallData" load_steps=10 format=3 uid="uid://160o4qgt1yri"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/item_data.gd" id="1_ajgi6"]
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/stall_data.gd" id="1_lolwr"]
+[ext_resource type="Texture2D" uid="uid://c8jnwm76caydf" path="res://icon.svg" id="2_sequt"]
+[ext_resource type="Texture2D" uid="uid://by72hqpgishg6" path="res://GMTK_Jam/Resources/Stone.png" id="3_go4pf"]
+
+[sub_resource type="Resource" id="Resource_254xs"]
+script = ExtResource("1_ajgi6")
+item_name = "Sword"
+quality = 5
+texture = ExtResource("2_sequt")
+
+[sub_resource type="Resource" id="Resource_tlj51"]
+script = ExtResource("1_ajgi6")
+item_name = "Wand"
+quality = 3
+texture = ExtResource("3_go4pf")
+
+[sub_resource type="Resource" id="Resource_jf0rv"]
+script = ExtResource("1_ajgi6")
+item_name = "Wand"
+quality = 3
+texture = ExtResource("3_go4pf")
+
+[sub_resource type="Resource" id="Resource_4j8vv"]
+script = ExtResource("1_ajgi6")
+item_name = "Wand"
+quality = 3
+texture = ExtResource("3_go4pf")
+
+[sub_resource type="Resource" id="Resource_o3qho"]
+script = ExtResource("1_ajgi6")
+item_name = "Wand"
+quality = 3
+texture = ExtResource("3_go4pf")
+
+[resource]
+script = ExtResource("1_lolwr")
+item_datas = Array[ExtResource("1_ajgi6")]([SubResource("Resource_254xs"), SubResource("Resource_tlj51"), SubResource("Resource_jf0rv"), SubResource("Resource_4j8vv"), SubResource("Resource_o3qho")])

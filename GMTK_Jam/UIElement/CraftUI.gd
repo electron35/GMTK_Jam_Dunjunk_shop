@@ -4,7 +4,14 @@ extends PanelContainer
 var crafting_inventory = preload("res://GMTK_Jam/ScriptableObjects/Instances/MatInventory/CraftingGrid.tres")
 
 const Slot = preload("res://GMTK_Jam/UIElement/SlotUI.tscn")
+const Stall = preload("res://GMTK_Jam/ScriptableObjects/Instances/Stall.tres")
 
+#For now, it's the better way i found for getting the texture i need on crafted item
+const sword_const = preload("res://GMTK_Jam/ScriptableObjects/Instances/Items/Sword.tres")
+const wand_const  = preload("res://GMTK_Jam/ScriptableObjects/Instances/Items/Wand.tres")
+const bow_const   = preload("res://GMTK_Jam/ScriptableObjects/Instances/Items/Bow.tres")
+
+const sword_text = "res://icon.svg"
 
 func set_inventory_data(inventory_data: InventoryData):
 	inventory_data.inventory_updated.connect(on_inventory_update)
@@ -26,11 +33,9 @@ func on_inventory_update(inventory_data: InventoryData):
 func _on_button_pressed():
 	var slot1
 	var slot2
-	var crafting_array: Array[String]
+	var crafting_array: Array[String] = []
 	var quality = 0
 	var craft_type = ""
-	
-	var craft_is_valide: bool = false
 	
 	if crafting_grid.get_child(0):
 		slot1 = crafting_grid.get_child(0)
@@ -50,13 +55,26 @@ func _on_button_pressed():
 			craft_type = "Wand"
 		
 		if craft_type != "":
-			quality = slot1.quality + slot2.quality
+			var item_to_send: ItemData = ItemData.new()
 			
-			print("%s of quality %x" % [craft_type,quality])
+			#I hope i can clean that too later
+			match (craft_type):
+				"Sword":
+					item_to_send.texture = sword_const.texture
+				"Bow":
+					item_to_send.texture = bow_const.texture
+				"Wand":
+					item_to_send.texture = wand_const.texture
+			
+			item_to_send.item_name = craft_type
+			item_to_send.quality = slot1.quality + slot2.quality
+			
+			print("%s of quality %x" % [item_to_send.item_name,item_to_send.quality])
 			crafting_array.clear()
 			for child in crafting_grid.get_children():
 				child.queue_free()
 			crafting_inventory.empty()
+			Stall.add(item_to_send)
 	
 	
 	
