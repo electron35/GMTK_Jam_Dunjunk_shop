@@ -28,7 +28,6 @@ func drop_slot_data(grabbed_slot_data: SlotData, index: int) -> SlotData:
 		return null
 
 func empty():
-	slot_datas
 	for index in range(0,slot_datas.size()):
 		slot_datas[index] = null
 		inventory_updated.emit(self)

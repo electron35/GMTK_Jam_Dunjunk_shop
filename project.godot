@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 Main="*res://GMTK_Jam/script/Main.gd"
 
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
