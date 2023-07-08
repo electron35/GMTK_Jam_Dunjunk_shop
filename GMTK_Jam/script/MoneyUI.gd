@@ -9,4 +9,4 @@ func _process(delta):
 	$Money.text = str(Main.money)
 
 func _on_time_timeout():
-	Main.money -= Main.rent_value
+	Main.pay_rent()
