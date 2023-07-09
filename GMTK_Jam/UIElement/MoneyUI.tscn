@@ -36,7 +36,7 @@ theme = ExtResource("2_v647e")
 text = "00:00"
 
 [node name="Time" type="Timer" parent="SplitBox/Timer"]
-wait_time = 5.0
+wait_time = 15.0
 autostart = true
 
 [connection signal="timeout" from="SplitBox/Timer/Time" to="." method="_on_time_timeout"]

@@ -10,9 +10,13 @@ var rent_value: float
 
 var hold_item: ItemData
 
+var start_time: float
+var item_sold = 0
+
 func _ready():
 	money = 500
-	rent_value = 100
+	rent_value = 10000
+	start_time = Time.get_unix_time_from_system()
 	
 func create_dungeon(power:int, item_type: String):
 	var dungeon = dungeonConst.instantiate()
@@ -32,6 +36,4 @@ func pay_rent():
 	money -= int(rent_value)
 	rent_value *= 1.2
 	if (money < 0):
-		print("TU AS PERDU SALE PAUVRE, RESPECTE LE CAPITAL ESPECE D'ANARCHISTE ECO-TERRORISTE ZADISTE QUI SORT DE L'ARC REPUBLICAIN")
-
-
+		get_tree().change_scene_to_file("res://GMTK_Jam/UIElement/GameOverScreen/GameOver.tscn")
