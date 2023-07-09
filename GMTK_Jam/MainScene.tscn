@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c47gv16krga2d" path="res://GMTK_Jam/UIElement/stall_ui.tscn" id="5_1j3gn"]
 [ext_resource type="PackedScene" uid="uid://de88lqvcdu1df" path="res://GMTK_Jam/UIElement/CristalBall.tscn" id="6_5scpl"]
 [ext_resource type="PackedScene" uid="uid://c2kreckpasikc" path="res://GMTK_Jam/Nodes/Aventurier/AdventurerLane.tscn" id="6_jhyn8"]
-[ext_resource type="Theme" uid="uid://cqqhu72pwahb1" path="res://GMTK_Jam/Resources/themegame/inventaire.tres" id="7_2fpag"]
 [ext_resource type="Texture2D" uid="uid://2wnu31bb6bv5" path="res://GMTK_Jam/Resources/UIElement/TABLE.png" id="8_udtci"]
+[ext_resource type="AudioStream" uid="uid://dox5ukdj5uvjk" path="res://GMTK_Jam/Resources/Sound/Music/bossanova.wav" id="9_dyj22"]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_csqij")
@@ -40,15 +40,17 @@ offset_bottom = 906.0
 texture = ExtResource("8_udtci")
 expand_mode = 1
 
-[node name="MoneyUI" parent="Foreground" instance=ExtResource("1_n71ok")]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -64.0
-offset_top = 18.0
-offset_right = 64.0
-offset_bottom = 51.0
-grow_horizontal = 2
+[node name="MarginContainer" type="MarginContainer" parent="Foreground"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_bottom = 160.0
+grow_horizontal = 0
+
+[node name="MoneyUI" parent="Foreground/MarginContainer" instance=ExtResource("1_n71ok")]
+layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="CristalBall" parent="Foreground" instance=ExtResource("6_5scpl")]
 anchors_preset = 3
@@ -61,25 +63,6 @@ offset_bottom = -52.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="CraftInventory" parent="Foreground" instance=ExtResource("3_c8hd4")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="CraftingMenu" type="Button" parent="Foreground"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -608.0
-offset_bottom = 67.0
-grow_horizontal = 0
-theme = ExtResource("7_2fpag")
-theme_override_font_sizes/font_size = 24
-text = "Inventaire"
-
 [node name="StallUI" parent="Foreground" instance=ExtResource("5_1j3gn")]
 anchors_preset = 0
 anchor_top = 0.0
@@ -90,4 +73,14 @@ offset_right = 597.0
 offset_bottom = 894.0
 grow_vertical = 1
 
-[connection signal="pressed" from="Foreground/CraftingMenu" to="." method="_on_crafting_menu_pressed"]
+[node name="CraftInventory" parent="Foreground" instance=ExtResource("3_c8hd4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="BossaNova" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_dyj22")
