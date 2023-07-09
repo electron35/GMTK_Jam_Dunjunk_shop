@@ -151,7 +151,6 @@ stream = ExtResource("7_pikap")
 stream = ExtResource("7_pp50o")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
-current = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 visible = false
@@ -190,5 +189,5 @@ layout_mode = 2
 [connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_retour_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_retour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
