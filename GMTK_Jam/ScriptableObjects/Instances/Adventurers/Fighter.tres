@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="AdventurerResource" load_steps=2 format=3 uid="uid://csuut7x3gyahj"]
-
-[ext_resource type="Script" path="res://GMTK_Jam/script/AdventurerResource.gd" id="1_35fwp"]
-
-[resource]
-script = ExtResource("1_35fwp")
-className = "Fighter"
-speed = 10
-puissance = 0
