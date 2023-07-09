@@ -39,4 +39,6 @@ func pay_rent():
 	money -= int(rent_value)
 	rent_value = int(rent_value*1.1)
 	if (money < 0):
+		rent_value=100
+		money=500
 		get_tree().change_scene_to_file("res://GMTK_Jam/UIElement/GameOverScreen/GameOver.tscn")
