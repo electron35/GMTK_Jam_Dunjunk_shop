@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwbyenow560p7"
-path="res://.godot/imported/BG.png-7a03375f5d67758592b906de1167a20d.ctex"
+uid="uid://camgjrtjhd2mb"
+path="res://.godot/imported/Boutique.png-e7afe59ea476dd9002a29c75b8ab56dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GMTK_Jam/Resources/BG.png"
-dest_files=["res://.godot/imported/BG.png-7a03375f5d67758592b906de1167a20d.ctex"]
+source_file="res://GMTK_Jam/Resources/sprite/Boutique.png"
+dest_files=["res://.godot/imported/Boutique.png-e7afe59ea476dd9002a29c75b8ab56dc.ctex"]
 
 [params]
 

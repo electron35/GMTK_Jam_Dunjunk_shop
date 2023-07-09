@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcvv01ntwrxis"]
 
-[ext_resource type="Script" path="res://GMTK_Jam/script/SlotUI.gd" id="1_egk54"]
+[ext_resource type="Script" path="res://GMTK_Jam/script/Inventory/SlotUI.gd" id="1_egk54"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_g8fse"]
 
 [node name="SlotUI" type="PanelContainer"]

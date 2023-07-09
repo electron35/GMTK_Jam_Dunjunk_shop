@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd5rxguf277o2"]
 
-[ext_resource type="Script" path="res://GMTK_Jam/script/CraftInventory.gd" id="1_c07et"]
+[ext_resource type="Script" path="res://GMTK_Jam/script/Inventory/CraftInventory.gd" id="1_g6lcj"]
 [ext_resource type="PackedScene" uid="uid://hpqk7j3phf64" path="res://GMTK_Jam/UIElement/CraftUI.tscn" id="1_ysyqp"]
 [ext_resource type="PackedScene" uid="uid://ctfcmt515w0rc" path="res://GMTK_Jam/UIElement/InventoryUI.tscn" id="2_rd0et"]
 [ext_resource type="PackedScene" uid="uid://dcvv01ntwrxis" path="res://GMTK_Jam/UIElement/SlotUI.tscn" id="4_qhrsn"]
@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 offset_right = 0.0239868
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_c07et")
+script = ExtResource("1_g6lcj")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0

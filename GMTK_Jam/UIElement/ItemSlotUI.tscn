@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bylnkaiey0hdw"]
 
-[ext_resource type="Script" path="res://GMTK_Jam/script/ItemSlotUI.gd" id="1_5vk8e"]
+[ext_resource type="Script" path="res://GMTK_Jam/script/Inventory/ItemSlotUI.gd" id="1_5vk8e"]
 [ext_resource type="Texture2D" uid="uid://c8jnwm76caydf" path="res://icon.svg" id="1_6nfc1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vfkx"]
