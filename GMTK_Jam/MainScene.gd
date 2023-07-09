@@ -10,3 +10,7 @@ func _ready():
 func _on_crafting_menu_pressed():
 	craft_inventory.visible = !craft_inventory.visible
 		
+
+
+func _on_button_pressed():
+	$Foreground/Button/TextureRect.visible = !$Foreground/Button/TextureRect.visible

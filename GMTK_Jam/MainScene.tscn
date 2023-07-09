@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cymdplt8wijn3"]
+[gd_scene load_steps=12 format=3 uid="uid://cymdplt8wijn3"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/MainScene.gd" id="1_csqij"]
 [ext_resource type="PackedScene" uid="uid://bopog6a2boi5e" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c2kreckpasikc" path="res://GMTK_Jam/Nodes/Aventurier/AdventurerLane.tscn" id="6_jhyn8"]
 [ext_resource type="Texture2D" uid="uid://2wnu31bb6bv5" path="res://GMTK_Jam/Resources/UIElement/TABLE.png" id="8_udtci"]
 [ext_resource type="AudioStream" uid="uid://dox5ukdj5uvjk" path="res://GMTK_Jam/Resources/Sound/Music/bossanova.wav" id="9_dyj22"]
+[ext_resource type="Texture2D" uid="uid://cpb2cphre3ad2" path="res://GMTK_Jam/Resources/UIElement/RECIPES.png" id="9_fb4gp"]
+[ext_resource type="Theme" uid="uid://cqqhu72pwahb1" path="res://GMTK_Jam/Resources/themegame/inventaire.tres" id="9_mf6v2"]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_csqij")
@@ -82,6 +84,29 @@ offset_bottom = 40.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="Button" type="Button" parent="Foreground"]
+anchors_preset = -1
+anchor_left = 0.611
+anchor_right = 0.611
+offset_left = -149.6
+offset_top = -1.0
+offset_right = 154.4
+offset_bottom = 123.0
+theme = ExtResource("9_mf6v2")
+text = "Recipe"
+
+[node name="TextureRect" type="TextureRect" parent="Foreground/Button"]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_top = 126.0
+offset_right = 305.0
+offset_bottom = 582.0
+texture = ExtResource("9_fb4gp")
+expand_mode = 1
+
 [node name="BossaNova" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_dyj22")
 volume_db = -5.0
+
+[connection signal="pressed" from="Foreground/Button" to="." method="_on_button_pressed"]
