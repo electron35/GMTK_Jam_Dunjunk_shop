@@ -2,10 +2,8 @@
 
 [ext_resource type="Resource" uid="uid://b2t6a48khcqhd" path="res://GMTK_Jam/ScriptableObjects/Instances/Items/Bow.tres" id="1_hoje6"]
 [ext_resource type="Script" path="res://GMTK_Jam/script/data/stall_data.gd" id="1_lolwr"]
-
 [ext_resource type="Resource" uid="uid://daa6yeyoxs2sm" path="res://GMTK_Jam/ScriptableObjects/Instances/Items/Sword.tres" id="2_lqft5"]
 [ext_resource type="Resource" uid="uid://dgk3kuobijlnf" path="res://GMTK_Jam/ScriptableObjects/Instances/Items/Wand.tres" id="3_188bu"]
-
 
 [resource]
 script = ExtResource("1_lolwr")

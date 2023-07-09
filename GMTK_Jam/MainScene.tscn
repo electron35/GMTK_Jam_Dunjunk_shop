@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cymdplt8wijn3"]
+[gd_scene load_steps=10 format=3 uid="uid://cymdplt8wijn3"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/MainScene.gd" id="1_csqij"]
 [ext_resource type="PackedScene" uid="uid://bopog6a2boi5e" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dwbyenow560p7" path="res://GMTK_Jam/Resources/UIElement/BG.png" id="3_52tmj"]
 [ext_resource type="PackedScene" uid="uid://bd5rxguf277o2" path="res://GMTK_Jam/UIElement/CraftInventory.tscn" id="3_c8hd4"]
 [ext_resource type="PackedScene" uid="uid://c47gv16krga2d" path="res://GMTK_Jam/UIElement/stall_ui.tscn" id="5_1j3gn"]
+[ext_resource type="PackedScene" uid="uid://de88lqvcdu1df" path="res://GMTK_Jam/UIElement/CristalBall.tscn" id="6_5scpl"]
 [ext_resource type="PackedScene" uid="uid://c2kreckpasikc" path="res://GMTK_Jam/Nodes/Aventurier/AdventurerLane.tscn" id="6_jhyn8"]
+[ext_resource type="Texture2D" uid="uid://2wnu31bb6bv5" path="res://GMTK_Jam/Resources/UIElement/TABLE.png" id="8_udtci"]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource("1_csqij")
@@ -28,11 +30,30 @@ expand_mode = 2
 [node name="Foreground" type="CanvasLayer" parent="."]
 layer = 10
 
+[node name="StallTexture" type="TextureRect" parent="Foreground"]
+offset_left = 2.0
+offset_top = 640.0
+offset_right = 1600.0
+offset_bottom = 906.0
+texture = ExtResource("8_udtci")
+expand_mode = 1
+
 [node name="MoneyUI" parent="Foreground" instance=ExtResource("1_n71ok")]
 offset_left = 786.0
 offset_top = 11.0
 offset_right = 914.0
 offset_bottom = 44.0
+
+[node name="CristalBall" parent="Foreground" instance=ExtResource("6_5scpl")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -382.0
+offset_top = -358.0
+offset_right = -109.0
+offset_bottom = -65.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="CraftingMenu" type="Button" parent="Foreground"]
 offset_left = 977.0
@@ -44,6 +65,7 @@ theme_override_font_sizes/font_size = 24
 text = "Inventaire"
 
 [node name="CraftInventory" parent="Foreground/CraftingMenu" instance=ExtResource("3_c8hd4")]
+visible = false
 layout_mode = 1
 offset_left = 1.0
 offset_top = 39.0

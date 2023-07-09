@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://de88lqvcdu1df"]
+
+[ext_resource type="Texture2D" uid="uid://bo7str4m16685" path="res://GMTK_Jam/Resources/UIElement/CristalBall.png" id="1_21p0q"]
+[ext_resource type="Script" path="res://GMTK_Jam/UIElement/CristalBall.gd" id="1_pvvcb"]
+
+[node name="CristalBall" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1319.0
+offset_bottom = -602.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_pvvcb")
+
+[node name="TextureRect" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("1_21p0q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureRect" to="." method="_on_texture_rect_pressed"]
