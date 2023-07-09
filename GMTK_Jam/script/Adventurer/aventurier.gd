@@ -55,7 +55,7 @@ func item_processing(item: ItemData):
 	_buy(powerAventurer*10	)
 
 func _sell():
-	
+	rng.randomize()
 	advHasSell=true
 	var quality = rng.randi_range(1,10)
 	var type = rng.randi_range(0,2)
@@ -80,6 +80,7 @@ func _exitShop():
 func setClass(data: AdventurerData):
 	class_reference = data
 	classAdventurer = data.className
+	rng.randomize()
 	
 	$SpriteAventurer.texture = data.texture_neutral
 	var speed_multiplier = rng.randi_range(0,5)

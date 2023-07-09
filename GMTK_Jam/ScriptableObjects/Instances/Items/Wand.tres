@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_ppj5e")
 item_name = "Wand"
-quality = 0
+quality = 1
 texture = ExtResource("2_f56jp")
