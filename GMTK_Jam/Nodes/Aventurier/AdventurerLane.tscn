@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2kreckpasikc"]
 
-[ext_resource type="Script" path="res://GMTK_Jam/script/AdventurerLane.gd" id="1_30h4j"]
+[ext_resource type="Script" path="res://GMTK_Jam/script/Adventurer/AdventurerLane.gd" id="1_cw3f4"]
 [ext_resource type="PackedScene" uid="uid://ch31relevrbyy" path="res://GMTK_Jam/Nodes/Aventurier/SpawnAventurier.tscn" id="1_ve28g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xmob8"]
 size = Vector2(86, 855)
 
 [node name="AdventurerLane" type="Node2D"]
-script = ExtResource("1_30h4j")
+script = ExtResource("1_cw3f4")
 
 [node name="adventurerGenerator" parent="." instance=ExtResource("1_ve28g")]
 position = Vector2(-383, 654)

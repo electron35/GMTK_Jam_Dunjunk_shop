@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://6gac3n554pj"]
 
-[ext_resource type="Script" path="res://GMTK_Jam/script/SoundManager.gd" id="1_m0tvm"]
+[ext_resource type="Script" path="res://GMTK_Jam/script/SoundManager/SoundManager.gd" id="1_m0tvm"]
 [ext_resource type="Resource" uid="uid://b6j3bd2xo3xjm" path="res://GMTK_Jam/ScriptableObjects/Instances/Sounds/soundlist.tres" id="2_mri57"]
 
 [node name="SoundManager" type="Node"]
