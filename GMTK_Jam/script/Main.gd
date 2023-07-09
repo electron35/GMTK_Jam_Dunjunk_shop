@@ -8,6 +8,8 @@ var main_scene_ref:Node2D
 var money:int
 var rent_value: float
 
+var AdventurerDead: bool = false
+
 var hold_item: ItemData
 
 var start_time: float
