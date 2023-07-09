@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3h11upyg5g0h"]
+[gd_scene load_steps=11 format=3 uid="uid://b3h11upyg5g0h"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/menuScene.gd" id="1_jbbfw"]
-[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_adlbs"]
 [ext_resource type="Texture2D" uid="uid://dfs61avc3h0ol" path="res://GMTK_Jam/Resources/UIElement/TITLE_SCREEN.png" id="2_b8p6s"]
 [ext_resource type="Texture2D" uid="uid://dfymtj6havkom" path="res://GMTK_Jam/Resources/UIElement/LOGO.png" id="3_v61yf"]
 [ext_resource type="Theme" uid="uid://cqqhu72pwahb1" path="res://GMTK_Jam/Resources/themegame/inventaire.tres" id="4_w1i3b"]
@@ -12,30 +11,94 @@
 [ext_resource type="AudioStream" uid="uid://dghtj2i3gsexf" path="res://GMTK_Jam/Resources/Sound/Sfx/FIGHTER_BAD.wav" id="7_pp50o"]
 [ext_resource type="Texture2D" uid="uid://cnie4rt3dfetq" path="res://GMTK_Jam/Resources/sprite/Menu/tutorial.png" id="9_a1jcl"]
 
-[node name="Menu" type="CenterContainer"]
+[node name="Menu" type="Control"]
 custom_minimum_size = Vector2(1200, 800)
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("1_jbbfw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(1600, 900)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = -2.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_b8p6s")
+expand_mode = 1
 
 [node name="MenuGame" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 320)
+layout_mode = 1
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 733.0
+offset_bottom = 967.0
+
+[node name="border5" type="Container" parent="MenuGame"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="MenuGame"]
-custom_minimum_size = Vector2(540, 160)
+custom_minimum_size = Vector2(720, 360)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("3_v61yf")
+expand_mode = 3
+
+[node name="border4" type="Container" parent="MenuGame"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Jouer" type="Button" parent="MenuGame"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_w1i3b")
+theme_override_font_sizes/font_size = 32
+text = "Jouer"
+
+[node name="border3" type="Container" parent="MenuGame"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Credits" type="Button" parent="MenuGame"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_w1i3b")
+theme_override_font_sizes/font_size = 32
+text = "credits"
+
+[node name="border2" type="Container" parent="MenuGame"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Quitter" type="Button" parent="MenuGame"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_w1i3b")
+theme_override_font_sizes/font_size = 32
+text = "quitter"
 
 [node name="MarginContainer" type="MarginContainer" parent="MenuGame"]
 layout_mode = 2
@@ -49,51 +112,15 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 alignment = 1
 
-[node name="Jouer" type="Button" parent="MenuGame/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 80)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-focus_mode = 0
-theme = ExtResource("4_w1i3b")
-theme_override_font_sizes/font_size = 32
-text = "Jouer"
-
-[node name="border3" type="Container" parent="MenuGame/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(30, 0)
-layout_mode = 2
-
-[node name="Credits" type="Button" parent="MenuGame/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 80)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-focus_mode = 0
-theme = ExtResource("4_w1i3b")
-theme_override_font_sizes/font_size = 32
-text = "credits"
-
-[node name="border2" type="Container" parent="MenuGame/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(30, 0)
-layout_mode = 2
-
-[node name="Quitter" type="Button" parent="MenuGame/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 80)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-focus_mode = 0
-theme = ExtResource("4_w1i3b")
-theme_override_font_sizes/font_size = 32
-text = "quitter"
-
 [node name="creditMap" type="Control" parent="."]
 visible = false
 custom_minimum_size = Vector2(720, 720)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="creditMap"]
 layout_mode = 1
@@ -105,8 +132,12 @@ grow_vertical = 2
 alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="creditMap/VBoxContainer"]
+custom_minimum_size = Vector2(720, 360)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("5_rrd1o")
+expand_mode = 5
 
 [node name="border" type="Container" parent="creditMap/VBoxContainer"]
 custom_minimum_size = Vector2(0, 10)
@@ -122,6 +153,10 @@ focus_mode = 0
 theme = ExtResource("4_w1i3b")
 theme_override_font_sizes/font_size = 32
 text = "Retour Menu"
+
+[node name="border2" type="Container" parent="creditMap/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
 
 [node name="Musique" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qmljc")
@@ -143,6 +178,10 @@ current = true
 visible = false
 custom_minimum_size = Vector2(1600, 900)
 layout_mode = 2
+offset_left = 160.0
+offset_top = 90.0
+offset_right = 1760.0
+offset_bottom = 990.0
 
 [node name="Tutorial" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
@@ -162,7 +201,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
-theme = ExtResource("2_adlbs")
+theme = ExtResource("4_w1i3b")
 theme_override_font_sizes/font_size = 32
 text = "Continue"
 
@@ -170,9 +209,9 @@ text = "Continue"
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 
-[connection signal="pressed" from="MenuGame/MarginContainer/VBoxContainer/Jouer" to="." method="_on_jouer_pressed"]
-[connection signal="pressed" from="MenuGame/MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="MenuGame/MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="MenuGame/Jouer" to="." method="_on_jouer_pressed"]
+[connection signal="pressed" from="MenuGame/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MenuGame/Quitter" to="." method="_on_quitter_pressed"]
 [connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_retour_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_credits_pressed"]
