@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bopog6a2boi5e"]
+[gd_scene load_steps=4 format=3 uid="uid://bopog6a2boi5e"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/MoneyUI.gd" id="1_1ttm1"]
+[ext_resource type="Texture2D" uid="uid://daqox84tm35od" path="res://GMTK_Jam/Resources/UIElement/fond.png" id="1_ja0oq"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_v647e"]
 
 [node name="MoneyUI" type="TextureRect"]
 offset_right = 124.0
 offset_bottom = 24.0
+texture = ExtResource("1_ja0oq")
 script = ExtResource("1_1ttm1")
 
 [node name="SplitBox" type="HSplitContainer" parent="."]
@@ -26,17 +28,19 @@ dragger_visibility = 1
 
 [node name="Money" type="Label" parent="SplitBox"]
 layout_mode = 2
+size_flags_horizontal = 0
 theme = ExtResource("2_v647e")
 text = "00000"
 horizontal_alignment = 1
 
 [node name="Timer" type="Label" parent="SplitBox"]
 layout_mode = 2
+size_flags_horizontal = 8
 theme = ExtResource("2_v647e")
 text = "00:00"
 
 [node name="Time" type="Timer" parent="SplitBox/Timer"]
-wait_time = 15.0
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="SplitBox/Timer/Time" to="." method="_on_time_timeout"]

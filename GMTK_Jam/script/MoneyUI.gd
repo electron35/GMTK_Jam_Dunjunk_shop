@@ -7,7 +7,7 @@ func _ready():
 	
 func _process(_delta):
 	$SplitBox/Timer.text = str(int($SplitBox/Timer/Time.time_left)) + "s"
-	$SplitBox/Money.text = str(Main.money)
+	$SplitBox/Money.text = str(Main.money) + "G"
 
 func _on_time_timeout():
 	Main.pay_rent()
