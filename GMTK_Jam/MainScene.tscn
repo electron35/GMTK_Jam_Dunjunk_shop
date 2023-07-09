@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://GMTK_Jam/MainScene.gd" id="1_csqij"]
 [ext_resource type="PackedScene" uid="uid://bopog6a2boi5e" path="res://GMTK_Jam/UIElement/MoneyUI.tscn" id="1_n71ok"]
-[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_a3b6q"]
 [ext_resource type="Texture2D" uid="uid://dwbyenow560p7" path="res://GMTK_Jam/Resources/UIElement/BG.png" id="3_52tmj"]
 [ext_resource type="PackedScene" uid="uid://bd5rxguf277o2" path="res://GMTK_Jam/UIElement/CraftInventory.tscn" id="3_c8hd4"]
 [ext_resource type="PackedScene" uid="uid://c47gv16krga2d" path="res://GMTK_Jam/UIElement/stall_ui.tscn" id="5_1j3gn"]
 [ext_resource type="PackedScene" uid="uid://de88lqvcdu1df" path="res://GMTK_Jam/UIElement/CristalBall.tscn" id="6_5scpl"]
 [ext_resource type="PackedScene" uid="uid://c2kreckpasikc" path="res://GMTK_Jam/Nodes/Aventurier/AdventurerLane.tscn" id="6_jhyn8"]
+[ext_resource type="Theme" uid="uid://cqqhu72pwahb1" path="res://GMTK_Jam/Resources/themegame/inventaire.tres" id="7_2fpag"]
 [ext_resource type="Texture2D" uid="uid://2wnu31bb6bv5" path="res://GMTK_Jam/Resources/UIElement/TABLE.png" id="8_udtci"]
 
 [node name="Scene" type="Node2D"]
@@ -30,6 +30,7 @@ expand_mode = 2
 
 [node name="Foreground" type="CanvasLayer" parent="."]
 layer = 10
+follow_viewport_enabled = true
 
 [node name="StallTexture" type="TextureRect" parent="Foreground"]
 offset_left = 2.0
@@ -60,21 +61,24 @@ offset_bottom = -52.0
 grow_horizontal = 0
 grow_vertical = 0
 
+[node name="CraftInventory" parent="Foreground" instance=ExtResource("3_c8hd4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [node name="CraftingMenu" type="Button" parent="Foreground"]
-offset_left = 977.0
-offset_top = 8.0
-offset_right = 1585.0
-offset_bottom = 43.0
-theme = ExtResource("2_a3b6q")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -608.0
+offset_bottom = 67.0
+grow_horizontal = 0
+theme = ExtResource("7_2fpag")
 theme_override_font_sizes/font_size = 24
 text = "Inventaire"
-
-[node name="CraftInventory" parent="Foreground/CraftingMenu" instance=ExtResource("3_c8hd4")]
-layout_mode = 1
-offset_left = 7.0
-offset_top = 69.0
-offset_right = 222.096
-offset_bottom = 436.0
 
 [node name="StallUI" parent="Foreground" instance=ExtResource("5_1j3gn")]
 anchors_preset = 0

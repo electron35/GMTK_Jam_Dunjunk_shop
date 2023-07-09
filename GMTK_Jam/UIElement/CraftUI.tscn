@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://hpqk7j3phf64"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/UIElement/CraftUI.gd" id="1_hvdf1"]
-[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_mhc8u"]
+[ext_resource type="Theme" uid="uid://cqqhu72pwahb1" path="res://GMTK_Jam/Resources/themegame/inventaire.tres" id="2_i6l44"]
 
 [node name="CraftUI" type="PanelContainer"]
 offset_right = 40.0
@@ -23,7 +23,7 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBox"]
 layout_mode = 2
-theme = ExtResource("2_mhc8u")
+theme = ExtResource("2_i6l44")
 text = "CRAFT"
 
 [connection signal="pressed" from="MarginContainer/VBox/Button" to="." method="_on_button_pressed"]

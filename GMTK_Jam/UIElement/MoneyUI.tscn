@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bopog6a2boi5e"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/MoneyUI.gd" id="1_1ttm1"]
-[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_v647e"]
+[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_v647e"]
 
 [node name="MoneyUI" type="TextureRect"]
 offset_right = 124.0
