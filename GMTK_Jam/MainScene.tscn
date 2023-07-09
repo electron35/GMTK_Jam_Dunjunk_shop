@@ -26,6 +26,7 @@ texture = ExtResource("3_52tmj")
 expand_mode = 2
 
 [node name="Foreground" type="CanvasLayer" parent="."]
+layer = 10
 
 [node name="MoneyUI" parent="Foreground" instance=ExtResource("1_n71ok")]
 offset_left = 786.0

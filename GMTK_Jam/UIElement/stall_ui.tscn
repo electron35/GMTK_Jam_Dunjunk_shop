@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c47gv16krga2d"]
+[gd_scene load_steps=3 format=3 uid="uid://c47gv16krga2d"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/Inventory/stall_ui.gd" id="1_ssp50"]
+[ext_resource type="PackedScene" uid="uid://bylnkaiey0hdw" path="res://GMTK_Jam/UIElement/ItemSlotUI.tscn" id="2_xf1hh"]
 
 [node name="StallUI" type="MarginContainer"]
 anchors_preset = 2
@@ -15,5 +16,10 @@ size_flags_vertical = 3
 script = ExtResource("1_ssp50")
 
 [node name="StallBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="GrabbedSlot" parent="." instance=ExtResource("2_xf1hh")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0

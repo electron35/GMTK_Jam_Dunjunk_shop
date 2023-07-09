@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3agiuxka5m62"]
+[gd_scene load_steps=5 format=3 uid="uid://d3agiuxka5m62"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/Adventurer/aventurier.gd" id="1_fh4n0"]
 [ext_resource type="Texture2D" uid="uid://b6w7sbukoh72r" path="res://GMTK_Jam/Resources/sprite/WaF/WaF_Neutral.png" id="2_7oacq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egohe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm736"]
 radius = 111.0
@@ -10,9 +13,21 @@ height = 542.0
 [node name="Aventurer" type="Area2D"]
 script = ExtResource("1_fh4n0")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="ItemSlotUI" type="PanelContainer" parent="CanvasLayer"]
+offset_left = -201.0
+offset_top = -313.0
+offset_right = 127.0
+offset_bottom = 276.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_egohe")
+
 [node name="ColAventurer" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_tm736")
 
 [node name="SpriteAventurer" type="Sprite2D" parent="."]
 scale = Vector2(0.480032, 0.480032)
 texture = ExtResource("2_7oacq")
+
+[connection signal="gui_input" from="CanvasLayer/ItemSlotUI" to="." method="_on_item_slot_ui_gui_input"]

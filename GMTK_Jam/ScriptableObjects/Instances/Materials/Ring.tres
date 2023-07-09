@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="MaterialData" load_steps=3 format=3 uid="uid://c7uf7x5l13tqv"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/data/material_data.gd" id="1_qisvw"]
-[ext_resource type="Texture2D" uid="uid://c8jnwm76caydf" path="res://icon.svg" id="2_2asx8"]
+[ext_resource type="Texture2D" uid="uid://7mxnsvxpsii7" path="res://GMTK_Jam/Resources/Item/Ring.png" id="2_se256"]
 
 [resource]
 script = ExtResource("1_qisvw")
 type = "Ring"
-texture = ExtResource("2_2asx8")
+texture = ExtResource("2_se256")

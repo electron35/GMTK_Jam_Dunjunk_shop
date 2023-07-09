@@ -74,6 +74,7 @@ func _on_button_pressed():
 			for child in crafting_grid.get_children():
 				child.queue_free()
 			crafting_inventory.empty()
+			print(Stall.item_datas[1].item_name)
 			Stall.add(item_to_send)
 	
 	
