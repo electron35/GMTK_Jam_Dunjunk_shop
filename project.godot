@@ -23,10 +23,11 @@ Main="*res://GMTK_Jam/script/Main.gd"
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+window/stretch/mode="viewport"
 
 [gui]
 
-theme/custom="res://GMTK_Jam/Resources/theme.tres"
+theme/custom="res://GMTK_Jam/Resources/themegame/theme.tres"
 
 [rendering]
 

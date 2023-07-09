@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3h11upyg5g0h"]
+[gd_scene load_steps=9 format=3 uid="uid://b3h11upyg5g0h"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/menuScene.gd" id="1_jbbfw"]
-[ext_resource type="Texture2D" uid="uid://c7pglt66hlfoy" path="res://2023-07-08_21h01_46.png" id="2_vb700"]
-[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="4_8fn1o"]
+[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_adlbs"]
 [ext_resource type="Texture2D" uid="uid://cdecrit5rdidm" path="res://GMTK_Jam/Resources/sprite/Button/ButtonYellow.png" id="4_a5lwj"]
 [ext_resource type="AudioStream" uid="uid://b0k86575n3m16" path="res://GMTK_Jam/Resources/Sound/Music/Title.wav" id="5_qmljc"]
 [ext_resource type="AudioStream" uid="uid://xiiv1lhtkcav" path="res://GMTK_Jam/Resources/Sound/Sfx/ROGUE_HELLO.wav" id="6_71m5i"]
@@ -24,7 +23,6 @@ script = ExtResource("1_jbbfw")
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1600, 900)
 layout_mode = 2
-texture = ExtResource("2_vb700")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 320)
@@ -42,7 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("4_8fn1o")
+theme = ExtResource("2_adlbs")
 theme_override_font_sizes/font_size = 72
 text = "Merchandising"
 horizontal_alignment = 1
@@ -67,7 +65,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 focus_mode = 0
-theme = ExtResource("4_8fn1o")
+theme = ExtResource("2_adlbs")
 theme_override_font_sizes/font_size = 32
 text = "Jouer"
 
@@ -82,7 +80,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 focus_mode = 0
-theme = ExtResource("4_8fn1o")
+theme = ExtResource("2_adlbs")
 theme_override_font_sizes/font_size = 32
 text = "credits"
 
@@ -97,7 +95,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 focus_mode = 0
-theme = ExtResource("4_8fn1o")
+theme = ExtResource("2_adlbs")
 theme_override_font_sizes/font_size = 32
 text = "quitter"
 
@@ -129,7 +127,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
-theme = ExtResource("4_8fn1o")
+theme = ExtResource("2_adlbs")
 theme_override_font_sizes/font_size = 32
 text = "Retour Menu"
 
@@ -176,7 +174,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
-theme = ExtResource("4_8fn1o")
+theme = ExtResource("2_adlbs")
 theme_override_font_sizes/font_size = 32
 text = "Continue"
 
@@ -190,5 +188,5 @@ layout_mode = 2
 [connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_retour_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_retour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
