@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b23gfgab88oos"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b23gfgab88oos"]
 
 [ext_resource type="FontFile" uid="uid://bgw5dbb5i6afo" path="res://GMTK_Jam/Resources/Font/Deutsch.ttf" id="1_p24lw"]
+[ext_resource type="StyleBox" uid="uid://dprrdy5unagxq" path="res://GMTK_Jam/Resources/UIElement/stylebox/buttonHover.tres" id="2_gkti8"]
+[ext_resource type="StyleBox" uid="uid://dl8hviij108mn" path="res://GMTK_Jam/Resources/UIElement/stylebox/buttonNormal.tres" id="2_hf6k0"]
+[ext_resource type="StyleBox" uid="uid://dv1uvjg2poxdj" path="res://GMTK_Jam/Resources/UIElement/stylebox/buttonPressed.tres" id="4_y6vi8"]
 
 [resource]
 default_font = ExtResource("1_p24lw")
@@ -9,4 +12,7 @@ Button/colors/icon_normal_color = Color(0.792157, 0.290196, 0.368627, 1)
 Button/constants/h_separation = 2
 Button/font_sizes/font_titre = 200
 Button/fonts/font = ExtResource("1_p24lw")
+Button/styles/hover = ExtResource("2_gkti8")
+Button/styles/normal = ExtResource("2_hf6k0")
+Button/styles/pressed = ExtResource("4_y6vi8")
 Label/fonts/font = ExtResource("1_p24lw")

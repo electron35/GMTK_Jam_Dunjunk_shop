@@ -18,12 +18,15 @@ config/icon="res://icon.svg"
 [autoload]
 
 Main="*res://GMTK_Jam/script/Main.gd"
-SoundManager="*res://GMTK_Jam/Nodes/AutoLoad/SoundManager.tscn"
 
 [display]
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+
+[gui]
+
+theme/custom="res://GMTK_Jam/Resources/theme.tres"
 
 [rendering]
 

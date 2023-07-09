@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c7uf7x5l13tqv"]
+[gd_resource type="Resource" script_class="MaterialData" load_steps=3 format=3 uid="uid://c7uf7x5l13tqv"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/data/material_data.gd" id="1_qisvw"]
 [ext_resource type="Texture2D" uid="uid://c8jnwm76caydf" path="res://icon.svg" id="2_2asx8"]
