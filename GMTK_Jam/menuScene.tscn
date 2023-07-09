@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3h11upyg5g0h"]
+[gd_scene load_steps=10 format=3 uid="uid://b3h11upyg5g0h"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/menuScene.gd" id="1_jbbfw"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_adlbs"]
+[ext_resource type="Texture2D" uid="uid://dwbyenow560p7" path="res://GMTK_Jam/Resources/UIElement/BG.png" id="2_t42gv"]
 [ext_resource type="Texture2D" uid="uid://cdecrit5rdidm" path="res://GMTK_Jam/Resources/sprite/Button/ButtonYellow.png" id="4_a5lwj"]
 [ext_resource type="AudioStream" uid="uid://b0k86575n3m16" path="res://GMTK_Jam/Resources/Sound/Music/Title.wav" id="5_qmljc"]
 [ext_resource type="AudioStream" uid="uid://xiiv1lhtkcav" path="res://GMTK_Jam/Resources/Sound/Sfx/ROGUE_HELLO.wav" id="6_71m5i"]
@@ -23,6 +24,7 @@ script = ExtResource("1_jbbfw")
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1600, 900)
 layout_mode = 2
+texture = ExtResource("2_t42gv")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 320)
