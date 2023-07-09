@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3h11upyg5g0h"]
+[gd_scene load_steps=10 format=3 uid="uid://b3h11upyg5g0h"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/menuScene.gd" id="1_jbbfw"]
-[ext_resource type="AudioStream" uid="uid://cthu6rowpbcrj" path="res://GMTK_Jam/Music/game_over.wav" id="2_aebav"]
-[ext_resource type="AudioStream" uid="uid://dt4ablbwdnhgb" path="res://GMTK_Jam/SFX/vieuxquirit.wav" id="3_5yqrs"]
+[ext_resource type="Texture2D" uid="uid://c7pglt66hlfoy" path="res://2023-07-08_21h01_46.png" id="2_vb700"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="4_8fn1o"]
+[ext_resource type="Texture2D" uid="uid://cdecrit5rdidm" path="res://GMTK_Jam/Resources/sprite/Button/ButtonYellow.png" id="4_a5lwj"]
+[ext_resource type="AudioStream" uid="uid://b0k86575n3m16" path="res://GMTK_Jam/Resources/Sound/Music/Title.wav" id="5_qmljc"]
+[ext_resource type="AudioStream" uid="uid://xiiv1lhtkcav" path="res://GMTK_Jam/Resources/Sound/Sfx/ROGUE_HELLO.wav" id="6_71m5i"]
+[ext_resource type="AudioStream" uid="uid://dn424aycka1cy" path="res://GMTK_Jam/Resources/Sound/Sfx/MAGE_GOOD.wav" id="7_pikap"]
+[ext_resource type="AudioStream" uid="uid://dghtj2i3gsexf" path="res://GMTK_Jam/Resources/Sound/Sfx/FIGHTER_BAD.wav" id="7_pp50o"]
+[ext_resource type="Texture2D" uid="uid://cnie4rt3dfetq" path="res://GMTK_Jam/Resources/sprite/Menu/tutorial.png" id="9_a1jcl"]
 
 [node name="Menu" type="CenterContainer"]
 custom_minimum_size = Vector2(1200, 800)
@@ -16,14 +21,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_jbbfw")
 
-[node name="Musique" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_aebav")
-
-[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_5yqrs")
-
-[node name="AudioListener2D" type="AudioListener2D" parent="."]
-current = true
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 2
+texture = ExtResource("2_vb700")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 320)
@@ -53,40 +54,141 @@ size_flags_vertical = 6
 size_flags_stretch_ratio = 0.0
 
 [node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer2/MarginContainer"]
-custom_minimum_size = Vector2(280, 60)
+custom_minimum_size = Vector2(640, 150)
 layout_mode = 2
 size_flags_vertical = 4
-size_flags_stretch_ratio = 2.72
+size_flags_stretch_ratio = 0.0
 alignment = 1
 
 [node name="Jouer" type="Button" parent="VBoxContainer2/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_8fn1o")
 theme_override_font_sizes/font_size = 32
 text = "Jouer"
 
+[node name="border3" type="Container" parent="VBoxContainer2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
 [node name="Credits" type="Button" parent="VBoxContainer2/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_8fn1o")
 theme_override_font_sizes/font_size = 32
 text = "credits"
 
+[node name="border2" type="Container" parent="VBoxContainer2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
 [node name="Quitter" type="Button" parent="VBoxContainer2/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_8fn1o")
 theme_override_font_sizes/font_size = 32
 text = "quitter"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="creditMap" type="NinePatchRect" parent="."]
+visible = false
 custom_minimum_size = Vector2(720, 720)
 layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("4_a5lwj")
+region_rect = Rect2(0, 0, 320, 320)
+patch_margin_left = 40
+patch_margin_top = 40
+patch_margin_right = 40
+patch_margin_bottom = 40
 
-[connection signal="button_down" from="VBoxContainer2/MarginContainer/VBoxContainer/Jouer" to="." method="_on_button_button_down"]
-[connection signal="button_up" from="VBoxContainer2/MarginContainer/VBoxContainer/Credits" to="." method="_on_button_2_button_up"]
-[connection signal="button_down" from="VBoxContainer2/MarginContainer/VBoxContainer/Quitter" to="." method="_on_button_3_button_down"]
+[node name="VBoxContainer" type="VBoxContainer" parent="creditMap"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Retour" type="Button" parent="creditMap/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_8fn1o")
+theme_override_font_sizes/font_size = 32
+text = "Retour Menu"
+
+[node name="border" type="Container" parent="creditMap/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Musique" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qmljc")
+volume_db = -10.0
+
+[node name="ButtonSoundRogue" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_71m5i")
+
+[node name="ButtonSoundMage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_pikap")
+
+[node name="ButtonSoundFight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_pp50o")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 2
+
+[node name="Tutorial" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("9_a1jcl")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("4_8fn1o")
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+
+[node name="border" type="Container" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer2/MarginContainer/VBoxContainer/Jouer" to="." method="_on_jouer_pressed"]
+[connection signal="pressed" from="VBoxContainer2/MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer2/MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="creditMap/VBoxContainer/Retour" to="." method="_on_retour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_retour_pressed"]
