@@ -15,7 +15,7 @@ var item_sold = 0
 
 func _ready():
 	money = 500
-	rent_value = 10000
+	rent_value = 100
 	start_time = Time.get_unix_time_from_system()
 	
 func create_dungeon(power:int, item_type: String):
