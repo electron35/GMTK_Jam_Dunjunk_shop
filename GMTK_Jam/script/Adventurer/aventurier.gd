@@ -49,10 +49,10 @@ func item_processing(item: ItemData):
 		"Bow":
 			$SpriteAventurer.texture = class_reference.texture_bow
 	if (item.item_name == classAdventurer):
-		powerAventurer *= item.quality
+		powerAventurer += item.quality
 	else:
 		powerAventurer = 5
-	_buy(powerAventurer)
+	_buy(powerAventurer*10	)
 
 func _sell():
 	
@@ -72,6 +72,8 @@ func _buy(money: int):
 # lorsque l'aventurier va dans le donjon
 func _exitShop():
 	adventurerInShop=false
+	Main.create_dungeon(powerAventurer,classAdventurer)
+	self.queue_free()
 
 # parametre l'aventurier en fonction de la classe passee en argument
 

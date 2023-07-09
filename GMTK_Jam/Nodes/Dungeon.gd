@@ -12,8 +12,8 @@ var mat_item:MaterialData
 
 func _create_dungeon_instance(power:int,item_type: String):
 	adventurer_power = power
-	var time:int
-	time = 30 if (power > 30) else power 
+	var time:int = int(power / 5)
+	time = 30 if (time > 30) else time 
 	$Timer.wait_time = time
 	
 	match item_type:
@@ -23,4 +23,13 @@ func _create_dungeon_instance(power:int,item_type: String):
 			mat_item = mat_ref[1]
 		"Wand":
 			mat_item = mat_ref[2]
+	$Timer.start()
 	
+
+			
+
+
+
+func _on_timer_timeout():
+	Main.material_add(mat_item,adventurer_power)
+	self.queue_free()

@@ -15,7 +15,7 @@ func set_slot_data(slot_data: SlotData):
 	tooltip_text = type
 	
 	quality = slot_data.quality
-	quality_label.text = "%x" % [slot_data.quality]
+	quality_label.text = str(slot_data.quality)
 	quality_label.show()
 
 
