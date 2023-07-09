@@ -4,7 +4,7 @@ extends TextureRect
 
 func _ready():
 	$SplitBox/Timer/Time.wait_time = wait_time
-	$RentText.text="Next Rent: %s" % [str(Main.rent_value)]
+	$RentText.text="Next Rent: %s" % [str(int(Main.rent_value))]
 	
 func _process(_delta):
 	$SplitBox/Timer.text = str(int($SplitBox/Timer/Time.time_left)) + "s"
