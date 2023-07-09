@@ -68,7 +68,7 @@ size_flags_vertical = 4
 focus_mode = 0
 theme = ExtResource("4_w1i3b")
 theme_override_font_sizes/font_size = 32
-text = "Jouer"
+text = "Play"
 
 [node name="border3" type="Container" parent="MenuGame"]
 custom_minimum_size = Vector2(0, 15)
@@ -83,7 +83,7 @@ size_flags_vertical = 4
 focus_mode = 0
 theme = ExtResource("4_w1i3b")
 theme_override_font_sizes/font_size = 32
-text = "credits"
+text = "Credit"
 
 [node name="border2" type="Container" parent="MenuGame"]
 custom_minimum_size = Vector2(0, 15)
@@ -98,7 +98,7 @@ size_flags_vertical = 4
 focus_mode = 0
 theme = ExtResource("4_w1i3b")
 theme_override_font_sizes/font_size = 32
-text = "quitter"
+text = "Quit"
 
 [node name="MarginContainer" type="MarginContainer" parent="MenuGame"]
 layout_mode = 2
@@ -177,11 +177,12 @@ current = true
 [node name="MarginContainer" type="MarginContainer" parent="."]
 visible = false
 custom_minimum_size = Vector2(1600, 900)
-layout_mode = 2
-offset_left = 160.0
-offset_top = 90.0
-offset_right = 1760.0
-offset_bottom = 990.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Tutorial" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
@@ -206,7 +207,7 @@ theme_override_font_sizes/font_size = 32
 text = "Continue"
 
 [node name="border" type="Container" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 60)
+custom_minimum_size = Vector2(0, 180)
 layout_mode = 2
 
 [connection signal="pressed" from="MenuGame/Jouer" to="." method="_on_jouer_pressed"]
