@@ -9,7 +9,7 @@
 [sub_resource type="Resource" id="Resource_q1cqw"]
 script = ExtResource("3_7lyri")
 mat_data = ExtResource("2_gjulf")
-quality = 2
+quality = 1
 
 [sub_resource type="Resource" id="Resource_ntppf"]
 script = ExtResource("3_7lyri")
@@ -19,7 +19,7 @@ quality = 1
 [sub_resource type="Resource" id="Resource_m74gl"]
 script = ExtResource("3_7lyri")
 mat_data = ExtResource("5_htj3a")
-quality = 3
+quality = 1
 
 [resource]
 script = ExtResource("1_0psm6")

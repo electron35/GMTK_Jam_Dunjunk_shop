@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_ga86h")
 item_name = "Sword"
-quality = 2
+quality = 1
 texture = ExtResource("2_hrvn3")

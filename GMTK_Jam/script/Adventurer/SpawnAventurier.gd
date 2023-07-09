@@ -5,7 +5,6 @@ var rng = RandomNumberGenerator.new()
 var TimerInstanceCreation = 5
 const ScriptAventurer = preload("res://GMTK_Jam/Nodes/Aventurier/aventurier.tscn")
 @onready var timer = $Timer
-var test = 0
 const Classes = [
 	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/RogueF.tres"),
 	preload("res://GMTK_Jam/ScriptableObjects/Instances/Adventurers/FighterF.tres"),
@@ -35,8 +34,9 @@ func _on_timer_timeout():
 
 func _create_adventurer():
 	var Adventurerspawned = ScriptAventurer.instantiate()
-	
+	rng.randomize()
 	Adventurerspawned.setClass(Classes[rng.randi_range(0,5)])
+	
 	
 	# TODO: spawner un objet
 	add_child(Adventurerspawned)

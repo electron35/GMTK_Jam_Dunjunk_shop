@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var craft_inventory = $Foreground/CraftingMenu/CraftInventory
+@onready var craft_inventory = $Foreground/CraftInventory
+
 
 func _ready():
 	Main.main_scene_ref = self

@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3agiuxka5m62"]
+[gd_scene load_steps=8 format=3 uid="uid://d3agiuxka5m62"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/Adventurer/aventurier.gd" id="1_fh4n0"]
 [ext_resource type="Texture2D" uid="uid://b6w7sbukoh72r" path="res://GMTK_Jam/Resources/sprite/WaF/WaF_Neutral.png" id="2_7oacq"]
+[ext_resource type="AudioStream" uid="uid://dn424aycka1cy" path="res://GMTK_Jam/Resources/Sound/Sfx/MAGE_GOOD.wav" id="3_uq0vd"]
+[ext_resource type="AudioStream" uid="uid://soqel88rhgsu" path="res://GMTK_Jam/Resources/Sound/Sfx/MAGE_HELLO.wav" id="4_mtmh7"]
+[ext_resource type="AudioStream" uid="uid://bwl6s263jc8ml" path="res://GMTK_Jam/Resources/Sound/Sfx/MAGE_BAD.wav" id="5_av8sf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egohe"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -29,5 +32,14 @@ shape = SubResource("CapsuleShape2D_tm736")
 [node name="SpriteAventurer" type="Sprite2D" parent="."]
 scale = Vector2(0.480032, 0.480032)
 texture = ExtResource("2_7oacq")
+
+[node name="GoodAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_uq0vd")
+
+[node name="HelloAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mtmh7")
+
+[node name="BadAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_av8sf")
 
 [connection signal="gui_input" from="CanvasLayer/ItemSlotUI" to="." method="_on_item_slot_ui_gui_input"]
