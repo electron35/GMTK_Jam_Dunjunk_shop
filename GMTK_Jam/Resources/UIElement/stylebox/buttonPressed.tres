@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dv1uvjg2poxdj"]
+
+[ext_resource type="Texture2D" uid="uid://dcu05qa8jwik0" path="res://GMTK_Jam/Resources/sprite/Button/ButtonRedsmall.png" id="1_u4f7n"]
+
+[resource]
+texture = ExtResource("1_u4f7n")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
