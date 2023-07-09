@@ -4,7 +4,8 @@
 [ext_resource type="Theme" uid="uid://cqqhu72pwahb1" path="res://GMTK_Jam/Resources/themegame/inventaire.tres" id="2_i6l44"]
 
 [node name="CraftUI" type="PanelContainer"]
-offset_right = 40.0
+offset_right = 236.0
+offset_bottom = 204.0
 script = ExtResource("1_hvdf1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
