@@ -55,12 +55,15 @@ func item_processing(item: ItemData):
 		"Bow":
 			$SpriteAventurer.texture = class_reference.texture_bow
 	if (item.item_name == classAdventurer):
+		$GoodAudio.play()
 		powerAventurer += item.quality
 	else:
+		$BadAudio.play()
 		powerAventurer = 5
 	_buy(powerAventurer*10)
 
 func _sell():
+	$HelloAudio.play()
 	scale.x += 0.1
 	scale.y += 0.1
 	advHasSell=true
