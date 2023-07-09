@@ -20,6 +20,7 @@ func setting_up(stall_data: StallData):
 func _process(_delta):
 	if Main.hold_item == null:
 		grabbed_slot.hide()
+		grabbed_item_data = null
 	if grabbed_slot.visible:
 		grabbed_slot.global_position = get_global_mouse_position() + Vector2(5,5)
 	
