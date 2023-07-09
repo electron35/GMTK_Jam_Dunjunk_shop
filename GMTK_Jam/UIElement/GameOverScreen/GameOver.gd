@@ -11,4 +11,4 @@ func _ready():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://GMTK_Jam/MainScene.gd")
+	get_tree().change_scene_to_file("res://GMTK_Jam/menuScene.tscn")

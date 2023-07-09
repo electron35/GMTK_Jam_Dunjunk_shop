@@ -12,14 +12,12 @@ func _on_jouer_pressed():
 	await $ButtonSoundMage.finished
 	$Musique.stop()
 	$MarginContainer.show()
-	pass # Replace with function body.
 
 
 func _on_credits_pressed():
 	$ButtonSoundRogue.play()
 	$creditMap.show()
 	$MenuGame.hide()
-	pass # Replace with function body.
 
 
 func _on_quitter_pressed():
