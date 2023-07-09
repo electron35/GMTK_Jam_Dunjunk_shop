@@ -1,14 +1,172 @@
-[gd_scene load_steps=4 format=3 uid="uid://bopog6a2boi5e"]
+[gd_scene load_steps=10 format=3 uid="uid://bopog6a2boi5e"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/MoneyUI.gd" id="1_1ttm1"]
 [ext_resource type="Texture2D" uid="uid://daqox84tm35od" path="res://GMTK_Jam/Resources/UIElement/fond.png" id="1_ja0oq"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_v647e"]
+[ext_resource type="Texture2D" uid="uid://d3uus0lm0yypq" path="res://GMTK_Jam/Resources/UIElement/COIN.png" id="3_xrhx3"]
+[ext_resource type="Texture2D" uid="uid://s8e7b0r0bv62" path="res://GMTK_Jam/Resources/UIElement/bad.png" id="4_b7gs3"]
+
+[sub_resource type="Animation" id="Animation_tvhxt"]
+resource_name = "disappear"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(103, 145), Vector2(108, 96)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7hogo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(103, 145)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_7lmnu"]
+resource_name = "baddisappear"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(266, 79), Vector2(270, 118)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4k0b"]
+_data = {
+"RESET": SubResource("Animation_7hogo"),
+"baddisappear": SubResource("Animation_7lmnu"),
+"disappear": SubResource("Animation_tvhxt")
+}
 
 [node name="MoneyUI" type="TextureRect"]
 offset_right = 124.0
 offset_bottom = 24.0
 texture = ExtResource("1_ja0oq")
 script = ExtResource("1_1ttm1")
+
+[node name="Sous" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 103.0
+offset_top = 145.0
+offset_right = 211.0
+offset_bottom = 247.0
+texture = ExtResource("3_xrhx3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sous"]
+libraries = {
+"": SubResource("AnimationLibrary_w4k0b")
+}
+
+[node name="perteSous" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_left = 103.0
+offset_top = 145.0
+offset_right = 167.0
+offset_bottom = 273.0
+texture = ExtResource("4_b7gs3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="perteSous"]
+libraries = {
+"": SubResource("AnimationLibrary_w4k0b")
+}
 
 [node name="SplitBox" type="HSplitContainer" parent="."]
 layout_mode = 1
