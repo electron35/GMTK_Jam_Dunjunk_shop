@@ -1,40 +1,10 @@
-[gd_resource type="Resource" script_class="StallData" load_steps=10 format=3 uid="uid://d16cdgk25gkc8"]
+[gd_resource type="Resource" script_class="StallData" load_steps=5 format=3 uid="uid://d16cdgk25gkc8"]
 
-[ext_resource type="Script" path="res://GMTK_Jam/script/data/item_data.gd" id="1_ajgi6"]
+[ext_resource type="Resource" uid="uid://b2t6a48khcqhd" path="res://GMTK_Jam/ScriptableObjects/Instances/Items/Bow.tres" id="1_hoje6"]
 [ext_resource type="Script" path="res://GMTK_Jam/script/data/stall_data.gd" id="1_lolwr"]
-[ext_resource type="Texture2D" uid="uid://c8jnwm76caydf" path="res://icon.svg" id="2_sequt"]
-[ext_resource type="Texture2D" path="res://GMTK_Jam/Resources/Stone.png" id="3_go4pf"]
-
-[sub_resource type="Resource" id="Resource_254xs"]
-script = ExtResource("1_ajgi6")
-item_name = "Sword"
-quality = 5
-texture = ExtResource("2_sequt")
-
-[sub_resource type="Resource" id="Resource_tlj51"]
-script = ExtResource("1_ajgi6")
-item_name = "Wand"
-quality = 3
-texture = ExtResource("3_go4pf")
-
-[sub_resource type="Resource" id="Resource_jf0rv"]
-script = ExtResource("1_ajgi6")
-item_name = "Wand"
-quality = 3
-texture = ExtResource("3_go4pf")
-
-[sub_resource type="Resource" id="Resource_4j8vv"]
-script = ExtResource("1_ajgi6")
-item_name = "Wand"
-quality = 3
-texture = ExtResource("3_go4pf")
-
-[sub_resource type="Resource" id="Resource_o3qho"]
-script = ExtResource("1_ajgi6")
-item_name = "Wand"
-quality = 3
-texture = ExtResource("3_go4pf")
+[ext_resource type="Resource" uid="uid://daa6yeyoxs2sm" path="res://GMTK_Jam/ScriptableObjects/Instances/Items/Sword.tres" id="2_lqft5"]
+[ext_resource type="Resource" uid="uid://dgk3kuobijlnf" path="res://GMTK_Jam/ScriptableObjects/Instances/Items/Wand.tres" id="3_188bu"]
 
 [resource]
 script = ExtResource("1_lolwr")
-item_datas = Array[ExtResource("1_ajgi6")]([SubResource("Resource_254xs"), SubResource("Resource_tlj51"), SubResource("Resource_jf0rv"), SubResource("Resource_4j8vv"), SubResource("Resource_o3qho")])
+item_datas = Array[Resource("res://GMTK_Jam/script/data/item_data.gd")]([ExtResource("1_hoje6"), ExtResource("2_lqft5"), ExtResource("3_188bu")])
