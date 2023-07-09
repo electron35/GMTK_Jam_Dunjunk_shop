@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdm8vsfaj4056"]
+[gd_scene load_steps=6 format=3 uid="uid://cdm8vsfaj4056"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/UIElement/GameOverScreen/GameOver.gd" id="1_54uck"]
 [ext_resource type="Texture2D" uid="uid://cnws71i7anslw" path="res://GMTK_Jam/Resources/UIElement/GAME_OVER.png" id="1_fu1nu"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_f73tg"]
+[ext_resource type="Theme" uid="uid://cqqhu72pwahb1" path="res://GMTK_Jam/Resources/themegame/inventaire.tres" id="4_v4a45"]
 [ext_resource type="AudioStream" uid="uid://cthu6rowpbcrj" path="res://GMTK_Jam/Resources/Sound/Music/game_over.wav" id="4_x6hn8"]
 
 [node name="GameOver" type="Node2D"]
@@ -43,6 +44,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 text = "You sold 00 items
 You survived for 000s"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 993.0
+offset_top = 387.0
+offset_right = 1333.0
+offset_bottom = 511.0
+theme = ExtResource("4_v4a45")
+text = "Main Menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_x6hn8")
