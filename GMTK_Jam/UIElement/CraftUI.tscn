@@ -20,10 +20,13 @@ theme_override_constants/separation = 20
 
 [node name="CraftingGrid" type="VBoxContainer" parent="MarginContainer/VBox"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Button" type="Button" parent="MarginContainer/VBox"]
 layout_mode = 2
 theme = ExtResource("2_i6l44")
+theme_override_font_sizes/font_size = 20
 text = "CRAFT"
 
 [connection signal="pressed" from="MarginContainer/VBox/Button" to="." method="_on_button_pressed"]

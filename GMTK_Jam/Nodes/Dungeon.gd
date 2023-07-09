@@ -1,6 +1,7 @@
 extends Control
 
 @export var adventurer_power: int = 0
+@export var lootInDungeon: bool
 
 const mat_ref = [
 	preload("res://GMTK_Jam/ScriptableObjects/Instances/Materials/Ring.tres"),

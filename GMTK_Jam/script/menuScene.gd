@@ -9,6 +9,9 @@ func _ready():
 
 func _on_jouer_pressed():
 	$ButtonSoundMage.play()
+	%Jouer.disabled=true
+	%Credits.disabled=true
+	%Quitter.disabled=true
 	await $ButtonSoundMage.finished
 	$Musique.stop()
 	$MarginContainer.show()
@@ -24,6 +27,9 @@ func _on_credits_pressed():
 
 func _on_quitter_pressed():
 	$ButtonSoundFight.play()
+	%Jouer.disabled=true
+	%Credits.disabled=true
+	%Quitter.disabled=true
 	await $ButtonSoundFight.finished
 	get_tree().quit()
 	pass # Replace with function body.
