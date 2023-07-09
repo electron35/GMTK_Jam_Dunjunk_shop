@@ -35,11 +35,14 @@ texture = ExtResource("2_7oacq")
 
 [node name="GoodAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_uq0vd")
+volume_db = 10.0
 
 [node name="HelloAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_mtmh7")
+volume_db = 10.0
 
 [node name="BadAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_av8sf")
+volume_db = 20.0
 
 [connection signal="gui_input" from="CanvasLayer/ItemSlotUI" to="." method="_on_item_slot_ui_gui_input"]
