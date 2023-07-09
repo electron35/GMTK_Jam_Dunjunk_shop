@@ -209,7 +209,7 @@ stream = ExtResource("6_f338w")
 layout_mode = 0
 offset_left = 40.0
 offset_top = 4.0
-offset_right = 422.0
+offset_right = 571.0
 offset_bottom = 55.0
 text = "Next Rent: 000"
 
