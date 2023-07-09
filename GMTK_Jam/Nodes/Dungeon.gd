@@ -24,11 +24,6 @@ func _create_dungeon_instance(power:int,item_type: String):
 		"Wand":
 			mat_item = mat_ref[2]
 	$Timer.start()
-	
-
-			
-
-
 
 func _on_timer_timeout():
 	Main.material_add(mat_item,adventurer_power)
