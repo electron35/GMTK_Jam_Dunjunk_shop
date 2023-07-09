@@ -22,7 +22,7 @@ var advhasBuy
 var speedAdvBuy = 400
 @onready var sprite_aventurer = $SpriteAventurer
 var def_scale: Vector2
-
+var is_happy: bool = false
 var rng = RandomNumberGenerator.new()
 
 
@@ -57,6 +57,7 @@ func item_processing(item: ItemData):
 	if (item.item_name == classAdventurer):
 		$GoodAudio.play()
 		powerAventurer += item.quality
+		is_happy = true
 	else:
 		$BadAudio.play()
 		powerAventurer = 5
@@ -76,7 +77,8 @@ func _sell():
 	
 func _buy(money: int):
 	Main.item_sold += 1
-	Main.money += money
+	if (is_happy):
+		Main.money += money
 	advhasBuy=true
 	
 	item_slot_ui.hide()
