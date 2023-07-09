@@ -18,6 +18,7 @@ func _on_jouer_pressed():
 func _on_credits_pressed():
 	$ButtonSoundRogue.play()
 	$creditMap.show()
+	$MenuGame.hide()
 	pass # Replace with function body.
 
 
@@ -31,6 +32,7 @@ func _on_quitter_pressed():
 func _on_retour_pressed():
 	$ButtonSoundRogue.play()
 	$creditMap.hide()
+	$MenuGame.show()
 	pass # Replace with function body.
 
 

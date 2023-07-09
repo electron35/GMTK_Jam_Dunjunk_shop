@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bopog6a2boi5e"]
+[gd_scene load_steps=11 format=3 uid="uid://bopog6a2boi5e"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/MoneyUI.gd" id="1_1ttm1"]
 [ext_resource type="Texture2D" uid="uid://daqox84tm35od" path="res://GMTK_Jam/Resources/UIElement/fond.png" id="1_ja0oq"]
 [ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/themegame/theme.tres" id="2_v647e"]
 [ext_resource type="Texture2D" uid="uid://d3uus0lm0yypq" path="res://GMTK_Jam/Resources/UIElement/COIN.png" id="3_xrhx3"]
 [ext_resource type="Texture2D" uid="uid://s8e7b0r0bv62" path="res://GMTK_Jam/Resources/UIElement/bad.png" id="4_b7gs3"]
+[ext_resource type="AudioStream" uid="uid://csjptxkftgmut" path="res://GMTK_Jam/Resources/Sound/Sfx/PLAYER_INVDOWN.wav" id="6_f338w"]
 
 [sub_resource type="Animation" id="Animation_tvhxt"]
 resource_name = "disappear"
@@ -200,5 +201,8 @@ text = "00:00"
 [node name="Time" type="Timer" parent="SplitBox/Timer"]
 wait_time = 5.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_f338w")
 
 [connection signal="timeout" from="SplitBox/Timer/Time" to="." method="_on_time_timeout"]
