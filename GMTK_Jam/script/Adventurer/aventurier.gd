@@ -21,11 +21,13 @@ var advHasSell
 var advhasBuy
 var speedAdvBuy = 400
 @onready var sprite_aventurer = $SpriteAventurer
+var def_scale: Vector2
 
 var rng = RandomNumberGenerator.new()
 
 
 func _ready():
+	def_scale = scale
 	adventurerInShop=true
 	advHasSell=false
 	advhasBuy=false
@@ -38,6 +40,10 @@ func _process(delta):
 		else:
 			position.x += delta*speedAdventurer
 	item_slot_ui.set_global_position($SpriteAventurer.global_position+Vector2(-200,-250))
+	if def_scale.y < scale.y:
+		scale.y -= 0.01
+	if def_scale.x < scale.x:
+		scale.x -= 0.01
 
 func item_processing(item: ItemData):
 	Main.hold_item = null
@@ -52,10 +58,11 @@ func item_processing(item: ItemData):
 		powerAventurer += item.quality
 	else:
 		powerAventurer = 5
-	_buy(powerAventurer*10	)
+	_buy(powerAventurer*10)
 
 func _sell():
-	
+	scale.x += 0.1
+	scale.y += 0.1
 	advHasSell=true
 	rng.randomize()
 	var quality = rng.randi_range(1,10)
