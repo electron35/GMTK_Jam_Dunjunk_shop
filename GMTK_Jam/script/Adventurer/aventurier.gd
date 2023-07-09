@@ -2,10 +2,11 @@ extends Area2D
 
 const inventory = preload("res://GMTK_Jam/ScriptableObjects/Instances/MatInventory/Inventory.tres")
 const mat_type = [
-	preload("res://GMTK_Jam/ScriptableObjects/Instances/Materials/Ring.tres"),
 	preload("res://GMTK_Jam/ScriptableObjects/Instances/Materials/Stick.tres"),
+	preload("res://GMTK_Jam/ScriptableObjects/Instances/Materials/Ring.tres"),
 	preload("res://GMTK_Jam/ScriptableObjects/Instances/Materials/Stone.tres")
 ]
+
 @onready var canvas_layer = $CanvasLayer
 @onready var item_slot_ui = $CanvasLayer/ItemSlotUI
 
@@ -28,6 +29,7 @@ func _ready():
 	adventurerInShop=true
 	advHasSell=false
 	advhasBuy=false
+	rng.randomize()
 
 func _process(delta):
 	if(adventurerInShop==true):
@@ -53,15 +55,15 @@ func item_processing(item: ItemData):
 	_buy(powerAventurer)
 
 func _sell():
-	print("Adventurer sells you Object for X gold")
+	
 	advHasSell=true
 	var quality = rng.randi_range(1,10)
 	var type = rng.randi_range(0,2)
+	print(str(type))
 	Main.money -= quality*5
 	inventory.add(mat_type[type],quality)
 	
 func _buy(money: int):
-	print("Adventurer buy you weapon for X gold")
 	Main.money += money
 	advhasBuy=true
 	
@@ -82,7 +84,7 @@ func setClass(data: AdventurerData):
 	
 	speedAdventurer = 40 + 10*speed_multiplier
 	self.z_index = speed_multiplier
-	$CanvasLayer.layer = speed_multiplier
+	$CanvasLayer.layer = speed_multiplier+1
 
 
 

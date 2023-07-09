@@ -13,6 +13,7 @@ func set_slot_data(item : ItemData):
 	item_name=item.item_name
 	texture_rect.texture = item.texture
 	quality = item.quality
+	$MarginContainer/Label.text = str(quality)
 	
 func _on_gui_input(event):
 	if event is InputEventMouseButton \

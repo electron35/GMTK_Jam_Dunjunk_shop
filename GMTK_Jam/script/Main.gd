@@ -1,7 +1,9 @@
 extends Node2D
 
+const dungeonConst = preload("res://GMTK_Jam/Nodes/Dungeon.tscn")
+
 var money:int
-var rent_value: int
+var rent_value: float
 
 var hold_item: ItemData
 

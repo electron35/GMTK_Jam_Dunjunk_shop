@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bylnkaiey0hdw"]
+[gd_scene load_steps=4 format=3 uid="uid://bylnkaiey0hdw"]
 
 [ext_resource type="Script" path="res://GMTK_Jam/script/Inventory/ItemSlotUI.gd" id="1_5vk8e"]
+[ext_resource type="Theme" uid="uid://b23gfgab88oos" path="res://GMTK_Jam/Resources/theme.tres" id="2_fq2a8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vfkx"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -25,5 +26,13 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
 expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_fq2a8")
+theme_override_font_sizes/font_size = 100
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
