@@ -68,13 +68,10 @@ func _on_button_pressed():
 			
 			item_to_send.item_name = craft_type
 			item_to_send.quality = slot1.quality + slot2.quality
-			
-			print("%s of quality %x" % [item_to_send.item_name,item_to_send.quality])
 			crafting_array.clear()
 			for child in crafting_grid.get_children():
 				child.queue_free()
 			crafting_inventory.empty()
-			print(Stall.item_datas[1].item_name)
 			Stall.add(item_to_send)
 	
 	

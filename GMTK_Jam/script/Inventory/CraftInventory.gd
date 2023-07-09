@@ -20,8 +20,6 @@ func _process(_delta):
 		grabbed_slot.global_position = get_global_mouse_position() + Vector2(5,5)
 	
 func on_inventory_interact(inventory_data: InventoryData, index: int, button: int):
-	#print ("%s %s %s" % [inventory_data, index, button])
-	
 	match [grabbed_slot_data, button]:
 		[null, MOUSE_BUTTON_LEFT]:
 			grabbed_slot_data = inventory_data.grab_slot_data(index)

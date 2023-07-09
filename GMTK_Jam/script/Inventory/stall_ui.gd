@@ -43,8 +43,6 @@ func on_stall_update(stall_data: StallData):
 	populate_stall(stall_data)
 	
 func on_stall_interact(stall_data : StallData,index: int, button:int):
-	#print ("%s %s %s" % [inventory_data, index, button])
-
 	match [grabbed_item_data, button]:
 		[null, MOUSE_BUTTON_LEFT]:
 			grabbed_item_data = stall_data.grab_slot_data(index)

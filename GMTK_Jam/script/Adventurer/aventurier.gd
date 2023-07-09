@@ -71,7 +71,6 @@ func _sell():
 	var quality = rng.randi_range(1,10)
 	rng.randomize()
 	var type = rng.randi_range(0,2)
-	print(str(type))
 	Main.money -= quality*5
 	inventory.add(mat_type[type],quality)
 	

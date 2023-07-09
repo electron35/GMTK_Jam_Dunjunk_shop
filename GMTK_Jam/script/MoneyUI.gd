@@ -4,6 +4,7 @@ extends TextureRect
 
 func _ready():
 	$SplitBox/Timer/Time.wait_time = wait_time
+	$RentText.text="Next Rent: %s" % [str(Main.rent_value)]
 	
 func _process(_delta):
 	$SplitBox/Timer.text = str(int($SplitBox/Timer/Time.time_left)) + "s"
@@ -13,3 +14,4 @@ func _on_time_timeout():
 	Main.pay_rent()
 	$AudioStreamPlayer.play()
 	$perteSous/AnimationPlayer.play("baddisappear")
+	$RentText.text="Next Rent: %s" % [str(Main.rent_value)]
