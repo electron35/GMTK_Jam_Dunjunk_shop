@@ -47,6 +47,17 @@ func add(item,quality):
 	if !found_free:
 		slot_datas[slot_datas.size()-1] = slot
 	inventory_updated.emit(self)
+	
+func bulk_add(another_inv: InventoryData):
+	for child in another_inv.slot_datas:
+		add(child.mat_data,child.quality)
+
+func queue_add(item: MaterialData, quality:int):
+	var slot:SlotData = SlotData.new()
+	slot.mat_data = item
+	slot.quality = quality
+	
+	slot_datas.append(slot)
 
 func on_slot_clicked(index: int, button: int):
 	inventory_interact.emit(self,index,button)

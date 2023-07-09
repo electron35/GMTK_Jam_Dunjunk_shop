@@ -20,10 +20,10 @@ position = Vector2(15, 2)
 shape = SubResource("RectangleShape2D_xmob8")
 
 [node name="OutArea" type="Area2D" parent="."]
-position = Vector2(1471, 529)
+position = Vector2(1728, 535)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OutArea"]
-position = Vector2(99, 10)
+position = Vector2(39, -37)
 shape = SubResource("RectangleShape2D_xmob8")
 
 [node name="BuyArea3" type="Area2D" parent="."]
@@ -34,3 +34,4 @@ position = Vector2(-2, -3)
 shape = SubResource("RectangleShape2D_xmob8")
 
 [connection signal="area_entered" from="BuyArea" to="." method="_on_buy_area_area_entered"]
+[connection signal="area_entered" from="OutArea" to="." method="_on_out_area_area_entered"]

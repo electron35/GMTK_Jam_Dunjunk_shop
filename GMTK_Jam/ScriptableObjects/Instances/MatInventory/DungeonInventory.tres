@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=2 format=3 uid="uid://dv5y2eysmhvya"]
+
+[ext_resource type="Script" path="res://GMTK_Jam/script/data/inventory_data.gd" id="1_iosvm"]
+
+[resource]
+script = ExtResource("1_iosvm")
+slot_datas = Array[Resource("res://GMTK_Jam/script/data/slot_data.gd")]([])

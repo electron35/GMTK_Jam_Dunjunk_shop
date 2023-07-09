@@ -41,10 +41,14 @@ texture = ExtResource("8_udtci")
 expand_mode = 1
 
 [node name="MoneyUI" parent="Foreground" instance=ExtResource("1_n71ok")]
-offset_left = 786.0
-offset_top = 11.0
-offset_right = 914.0
-offset_bottom = 44.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 18.0
+offset_right = 64.0
+offset_bottom = 51.0
+grow_horizontal = 2
 
 [node name="CristalBall" parent="Foreground" instance=ExtResource("6_5scpl")]
 anchors_preset = 3
