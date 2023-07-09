@@ -5,5 +5,8 @@
 [resource]
 default_font = ExtResource("1_p24lw")
 default_font_size = 12
+Button/colors/icon_normal_color = Color(0.792157, 0.290196, 0.368627, 1)
+Button/constants/h_separation = 2
+Button/font_sizes/font_titre = 200
 Button/fonts/font = ExtResource("1_p24lw")
 Label/fonts/font = ExtResource("1_p24lw")
