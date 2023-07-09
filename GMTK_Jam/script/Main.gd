@@ -16,14 +16,15 @@ var item_sold = 0
 func _ready():
 	money = 500
 	rent_value = 100
-	start_time = Time.get_unix_time_from_system()
+
+func reset():
+	money = 500
+	rent_value = 100
 	
 func create_dungeon(power:int, item_type: String):
 	var dungeon = dungeonConst.instantiate()
 	main_scene_ref.add_child(dungeon)
 	dungeon._create_dungeon_instance(power,item_type)
-	print("")
-	
 
 func material_add(item,quality):
 	dungeonInventory.queue_add(item,quality)
@@ -34,6 +35,6 @@ func add_to_inventory():
 
 func pay_rent():
 	money -= int(rent_value)
-	rent_value *= 1.2
+	rent_value *= 1.1
 	if (money < 0):
 		get_tree().change_scene_to_file("res://GMTK_Jam/UIElement/GameOverScreen/GameOver.tscn")
